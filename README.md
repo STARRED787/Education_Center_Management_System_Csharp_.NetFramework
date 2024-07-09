@@ -1,1 +1,1 @@
-# SchoolManagementSystem
+# Education_Center_Management_System_c#_.NetFramework
