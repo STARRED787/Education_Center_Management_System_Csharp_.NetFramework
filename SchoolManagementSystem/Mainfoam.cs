@@ -66,5 +66,15 @@ namespace SchoolManagementSystem
                 this.Hide();    
             }
         }
+
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }
