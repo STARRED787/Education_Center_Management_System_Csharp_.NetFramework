@@ -46,12 +46,12 @@
             this.tb_stname = new System.Windows.Forms.TextBox();
             this.tb_stnum = new System.Windows.Forms.TextBox();
             this.tb_stemail = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
+            this.bt_save = new System.Windows.Forms.Button();
+            this.bt_add = new System.Windows.Forms.Button();
+            this.bt_update = new System.Windows.Forms.Button();
+            this.bt_delete = new System.Windows.Forms.Button();
+            this.bt_new = new System.Windows.Forms.Button();
+            this.bt_display = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dgv_stinfo = new System.Windows.Forms.DataGridView();
@@ -144,12 +144,12 @@
             this.groupBox1.Controls.Add(this.dgv_stinfo);
             this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Controls.Add(this.dateTimePicker1);
-            this.groupBox1.Controls.Add(this.button8);
-            this.groupBox1.Controls.Add(this.button7);
-            this.groupBox1.Controls.Add(this.button6);
-            this.groupBox1.Controls.Add(this.button4);
-            this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Controls.Add(this.button2);
+            this.groupBox1.Controls.Add(this.bt_display);
+            this.groupBox1.Controls.Add(this.bt_new);
+            this.groupBox1.Controls.Add(this.bt_delete);
+            this.groupBox1.Controls.Add(this.bt_update);
+            this.groupBox1.Controls.Add(this.bt_add);
+            this.groupBox1.Controls.Add(this.bt_save);
             this.groupBox1.Controls.Add(this.tb_stemail);
             this.groupBox1.Controls.Add(this.tb_stnum);
             this.groupBox1.Controls.Add(this.tb_stname);
@@ -256,71 +256,72 @@
             this.tb_stemail.Size = new System.Drawing.Size(320, 25);
             this.tb_stemail.TabIndex = 11;
             // 
-            // button2
+            // bt_save
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button2.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(47, 300);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(88, 34);
-            this.button2.TabIndex = 12;
-            this.button2.Text = "Save";
-            this.button2.UseVisualStyleBackColor = false;
+            this.bt_save.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bt_save.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_save.Location = new System.Drawing.Point(47, 300);
+            this.bt_save.Name = "bt_save";
+            this.bt_save.Size = new System.Drawing.Size(88, 34);
+            this.bt_save.TabIndex = 12;
+            this.bt_save.Text = "Save";
+            this.bt_save.UseVisualStyleBackColor = false;
+            this.bt_save.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // bt_add
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button3.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(161, 300);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(88, 34);
-            this.button3.TabIndex = 13;
-            this.button3.Text = "Add";
-            this.button3.UseVisualStyleBackColor = false;
+            this.bt_add.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bt_add.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_add.Location = new System.Drawing.Point(161, 300);
+            this.bt_add.Name = "bt_add";
+            this.bt_add.Size = new System.Drawing.Size(88, 34);
+            this.bt_add.TabIndex = 13;
+            this.bt_add.Text = "Add";
+            this.bt_add.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // bt_update
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button4.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(276, 300);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(88, 34);
-            this.button4.TabIndex = 14;
-            this.button4.Text = "Update";
-            this.button4.UseVisualStyleBackColor = false;
+            this.bt_update.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bt_update.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_update.Location = new System.Drawing.Point(276, 300);
+            this.bt_update.Name = "bt_update";
+            this.bt_update.Size = new System.Drawing.Size(88, 34);
+            this.bt_update.TabIndex = 14;
+            this.bt_update.Text = "Update";
+            this.bt_update.UseVisualStyleBackColor = false;
             // 
-            // button6
+            // bt_delete
             // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button6.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(403, 300);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(88, 34);
-            this.button6.TabIndex = 15;
-            this.button6.Text = "Delete";
-            this.button6.UseVisualStyleBackColor = false;
+            this.bt_delete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bt_delete.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_delete.Location = new System.Drawing.Point(403, 300);
+            this.bt_delete.Name = "bt_delete";
+            this.bt_delete.Size = new System.Drawing.Size(88, 34);
+            this.bt_delete.TabIndex = 15;
+            this.bt_delete.Text = "Delete";
+            this.bt_delete.UseVisualStyleBackColor = false;
             // 
-            // button7
+            // bt_new
             // 
-            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button7.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(521, 300);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(88, 34);
-            this.button7.TabIndex = 16;
-            this.button7.Text = "New";
-            this.button7.UseVisualStyleBackColor = false;
+            this.bt_new.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bt_new.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_new.Location = new System.Drawing.Point(521, 300);
+            this.bt_new.Name = "bt_new";
+            this.bt_new.Size = new System.Drawing.Size(88, 34);
+            this.bt_new.TabIndex = 16;
+            this.bt_new.Text = "New";
+            this.bt_new.UseVisualStyleBackColor = false;
             // 
-            // button8
+            // bt_display
             // 
-            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button8.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(637, 300);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(88, 34);
-            this.button8.TabIndex = 17;
-            this.button8.Text = "Display";
-            this.button8.UseVisualStyleBackColor = false;
+            this.bt_display.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bt_display.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_display.Location = new System.Drawing.Point(637, 300);
+            this.bt_display.Name = "bt_display";
+            this.bt_display.Size = new System.Drawing.Size(88, 34);
+            this.bt_display.TabIndex = 17;
+            this.bt_display.Text = "Display";
+            this.bt_display.UseVisualStyleBackColor = false;
             // 
             // dateTimePicker1
             // 
@@ -403,12 +404,12 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button bt_display;
+        private System.Windows.Forms.Button bt_new;
+        private System.Windows.Forms.Button bt_delete;
+        private System.Windows.Forms.Button bt_update;
+        private System.Windows.Forms.Button bt_add;
+        private System.Windows.Forms.Button bt_save;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.DataGridView dgv_stinfo;
         private System.Windows.Forms.PictureBox pictureBox1;
