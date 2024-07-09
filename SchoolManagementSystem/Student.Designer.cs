@@ -44,8 +44,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.tb_stid = new System.Windows.Forms.TextBox();
             this.tb_stname = new System.Windows.Forms.TextBox();
-            this.tb_stdob = new System.Windows.Forms.TextBox();
-            this.tb_stgen = new System.Windows.Forms.TextBox();
             this.tb_stnum = new System.Windows.Forms.TextBox();
             this.tb_stemail = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
@@ -54,9 +52,15 @@
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.dgv_stinfo = new System.Windows.Forms.DataGridView();
+            this.cb_stgen = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_stinfo)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -116,11 +120,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(48)))), ((int)(((byte)(32)))));
-            this.label1.Font = new System.Drawing.Font("Rockwell Extra Bold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(409, 27);
+            this.label1.Location = new System.Drawing.Point(410, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(158, 32);
+            this.label1.Size = new System.Drawing.Size(128, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "STUDENT";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -131,11 +135,15 @@
             this.panel2.Controls.Add(this.label1);
             this.panel2.Location = new System.Drawing.Point(0, 28);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(989, 83);
+            this.panel2.Size = new System.Drawing.Size(989, 51);
             this.panel2.TabIndex = 2;
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cb_stgen);
+            this.groupBox1.Controls.Add(this.dgv_stinfo);
+            this.groupBox1.Controls.Add(this.pictureBox1);
+            this.groupBox1.Controls.Add(this.dateTimePicker1);
             this.groupBox1.Controls.Add(this.button8);
             this.groupBox1.Controls.Add(this.button7);
             this.groupBox1.Controls.Add(this.button6);
@@ -144,8 +152,6 @@
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.tb_stemail);
             this.groupBox1.Controls.Add(this.tb_stnum);
-            this.groupBox1.Controls.Add(this.tb_stgen);
-            this.groupBox1.Controls.Add(this.tb_stdob);
             this.groupBox1.Controls.Add(this.tb_stname);
             this.groupBox1.Controls.Add(this.tb_stid);
             this.groupBox1.Controls.Add(this.label8);
@@ -154,10 +160,10 @@
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(12, 135);
+            this.groupBox1.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(24, 85);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(965, 480);
+            this.groupBox1.Size = new System.Drawing.Size(953, 529);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Student Information";
@@ -226,42 +232,28 @@
             // 
             this.tb_stid.Location = new System.Drawing.Point(235, 43);
             this.tb_stid.Name = "tb_stid";
-            this.tb_stid.Size = new System.Drawing.Size(208, 26);
+            this.tb_stid.Size = new System.Drawing.Size(320, 25);
             this.tb_stid.TabIndex = 6;
             // 
             // tb_stname
             // 
             this.tb_stname.Location = new System.Drawing.Point(235, 82);
             this.tb_stname.Name = "tb_stname";
-            this.tb_stname.Size = new System.Drawing.Size(208, 26);
+            this.tb_stname.Size = new System.Drawing.Size(320, 25);
             this.tb_stname.TabIndex = 7;
-            // 
-            // tb_stdob
-            // 
-            this.tb_stdob.Location = new System.Drawing.Point(235, 129);
-            this.tb_stdob.Name = "tb_stdob";
-            this.tb_stdob.Size = new System.Drawing.Size(208, 26);
-            this.tb_stdob.TabIndex = 8;
-            // 
-            // tb_stgen
-            // 
-            this.tb_stgen.Location = new System.Drawing.Point(235, 166);
-            this.tb_stgen.Name = "tb_stgen";
-            this.tb_stgen.Size = new System.Drawing.Size(208, 26);
-            this.tb_stgen.TabIndex = 9;
             // 
             // tb_stnum
             // 
             this.tb_stnum.Location = new System.Drawing.Point(235, 205);
             this.tb_stnum.Name = "tb_stnum";
-            this.tb_stnum.Size = new System.Drawing.Size(208, 26);
+            this.tb_stnum.Size = new System.Drawing.Size(320, 25);
             this.tb_stnum.TabIndex = 10;
             // 
             // tb_stemail
             // 
             this.tb_stemail.Location = new System.Drawing.Point(235, 247);
             this.tb_stemail.Name = "tb_stemail";
-            this.tb_stemail.Size = new System.Drawing.Size(208, 26);
+            this.tb_stemail.Size = new System.Drawing.Size(320, 25);
             this.tb_stemail.TabIndex = 11;
             // 
             // button2
@@ -330,6 +322,44 @@
             this.button8.Text = "Display";
             this.button8.UseVisualStyleBackColor = false;
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(235, 125);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(320, 25);
+            this.dateTimePicker1.TabIndex = 18;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(592, 43);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(345, 229);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 19;
+            this.pictureBox1.TabStop = false;
+            // 
+            // dgv_stinfo
+            // 
+            this.dgv_stinfo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_stinfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_stinfo.Location = new System.Drawing.Point(16, 352);
+            this.dgv_stinfo.Name = "dgv_stinfo";
+            this.dgv_stinfo.Size = new System.Drawing.Size(921, 159);
+            this.dgv_stinfo.TabIndex = 20;
+            // 
+            // cb_stgen
+            // 
+            this.cb_stgen.FormattingEnabled = true;
+            this.cb_stgen.Items.AddRange(new object[] {
+            "Male",
+            "Female"});
+            this.cb_stgen.Location = new System.Drawing.Point(235, 166);
+            this.cb_stgen.Name = "cb_stgen";
+            this.cb_stgen.Size = new System.Drawing.Size(320, 26);
+            this.cb_stgen.TabIndex = 21;
+            this.cb_stgen.Text = "Select";
+            // 
             // Student
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -349,6 +379,8 @@
             this.panel2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_stinfo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -366,8 +398,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox tb_stemail;
         private System.Windows.Forms.TextBox tb_stnum;
-        private System.Windows.Forms.TextBox tb_stgen;
-        private System.Windows.Forms.TextBox tb_stdob;
         private System.Windows.Forms.TextBox tb_stname;
         private System.Windows.Forms.TextBox tb_stid;
         private System.Windows.Forms.Label label8;
@@ -379,5 +409,9 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DataGridView dgv_stinfo;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ComboBox cb_stgen;
     }
 }
