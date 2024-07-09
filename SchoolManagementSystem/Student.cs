@@ -60,7 +60,15 @@ namespace SchoolManagementSystem
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
+             dtp_stinfo.CustomFormat = "dd/MM/yyyy";
+        }
 
+        private void dtp_stinfo_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                dtp_stinfo.CustomFormat = "";
+            }
         }
     }
 }

@@ -331,6 +331,7 @@
             this.dtp_stinfo.Size = new System.Drawing.Size(320, 25);
             this.dtp_stinfo.TabIndex = 18;
             this.dtp_stinfo.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            this.dtp_stinfo.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dtp_stinfo_KeyDown);
             // 
             // pictureBox1
             // 
