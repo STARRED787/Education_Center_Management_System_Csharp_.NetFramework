@@ -1,6 +1,6 @@
 ﻿namespace SchoolManagementSystem
 {
-    partial class open
+    partial class intro
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(open));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(intro));
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pl_color = new System.Windows.Forms.Panel();
@@ -81,7 +81,7 @@
             this.lb_name.TabIndex = 3;
             this.lb_name.Text = "School Management Systen";
             // 
-            // open
+            // intro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -92,7 +92,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pl_loading);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "open";
+            this.Name = "intro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
