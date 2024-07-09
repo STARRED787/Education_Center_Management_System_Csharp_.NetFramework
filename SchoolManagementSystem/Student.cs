@@ -52,10 +52,21 @@ namespace SchoolManagementSystem
 
         private void button2_Click(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection();
-            conn.ConnectionString = " data source = DESKTOP-LDJQNC1\\SQLEXPRESS; database = sclManagementSystem; integrated security=true ";
-            SqlCommand comd = new SqlCommand();
-            comd.Connection = conn;
+            SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-LDJQNC1\SQLEXPRESS;Initial Catalog=sclManagementSystem;Integrated Security=True");
+            conn.Open();
+
+            SqlCommand cmd = new SqlCommand("INSERT INTO StudentInfoTb (Student_Id, Student_Name, Dob, Gender, Phone_Num, Email) VALUES (@Student_Id, @Student_Name, @Dob, @Gender, @Phone_Num, @Email)", conn);
+
+            cmd.Parameters.AddWithValue("@Student_Id", int.Parse(tb_stid.Text));
+            cmd.Parameters.AddWithValue("@Student_Name", tb_stname.Text);
+            cmd.Parameters.AddWithValue("@Dob", dtp_stinfo.Value);
+            cmd.Parameters.AddWithValue("@Gender", cb_stgen.SelectedItem.ToString());
+            cmd.Parameters.AddWithValue("@Phone_Num", tb_stnum.Text);
+            cmd.Parameters.AddWithValue("@Email", tb_stemail.Text);
+
+            cmd.ExecuteNonQuery();
+
+            MessageBox.Show("Record Saved Successfully", "Save", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
@@ -69,6 +80,11 @@ namespace SchoolManagementSystem
             {
                 dtp_stinfo.CustomFormat = "";
             }
+        }
+
+        private void bt_add_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 }
