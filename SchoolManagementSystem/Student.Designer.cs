@@ -52,7 +52,7 @@
             this.bt_delete = new System.Windows.Forms.Button();
             this.bt_new = new System.Windows.Forms.Button();
             this.bt_display = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtp_stinfo = new System.Windows.Forms.DateTimePicker();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dgv_stinfo = new System.Windows.Forms.DataGridView();
             this.cb_stgen = new System.Windows.Forms.ComboBox();
@@ -143,7 +143,7 @@
             this.groupBox1.Controls.Add(this.cb_stgen);
             this.groupBox1.Controls.Add(this.dgv_stinfo);
             this.groupBox1.Controls.Add(this.pictureBox1);
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
+            this.groupBox1.Controls.Add(this.dtp_stinfo);
             this.groupBox1.Controls.Add(this.bt_display);
             this.groupBox1.Controls.Add(this.bt_new);
             this.groupBox1.Controls.Add(this.bt_delete);
@@ -323,12 +323,14 @@
             this.bt_display.Text = "Display";
             this.bt_display.UseVisualStyleBackColor = false;
             // 
-            // dateTimePicker1
+            // dtp_stinfo
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(235, 125);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(320, 25);
-            this.dateTimePicker1.TabIndex = 18;
+            this.dtp_stinfo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtp_stinfo.Location = new System.Drawing.Point(235, 125);
+            this.dtp_stinfo.Name = "dtp_stinfo";
+            this.dtp_stinfo.Size = new System.Drawing.Size(320, 25);
+            this.dtp_stinfo.TabIndex = 18;
+            this.dtp_stinfo.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // pictureBox1
             // 
@@ -410,7 +412,7 @@
         private System.Windows.Forms.Button bt_update;
         private System.Windows.Forms.Button bt_add;
         private System.Windows.Forms.Button bt_save;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtp_stinfo;
         private System.Windows.Forms.DataGridView dgv_stinfo;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ComboBox cb_stgen;

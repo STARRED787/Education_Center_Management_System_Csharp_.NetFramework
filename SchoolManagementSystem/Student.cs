@@ -52,6 +52,14 @@ namespace SchoolManagementSystem
 
         private void button2_Click(object sender, EventArgs e)
         {
+            SqlConnection conn = new SqlConnection();
+            conn.ConnectionString = " data source = DESKTOP-LDJQNC1\\SQLEXPRESS; database = sclManagementSystem; integrated security=true ";
+            SqlCommand comd = new SqlCommand();
+            comd.Connection = conn;
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
 
         }
     }
