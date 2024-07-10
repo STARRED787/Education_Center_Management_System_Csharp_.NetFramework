@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Text.RegularExpressions;
+
 
 namespace SchoolManagementSystem
 {
@@ -52,24 +54,62 @@ namespace SchoolManagementSystem
 
         private void button2_Click(object sender, EventArgs e)
         {
+            // Basic validation checks
+            if (string.IsNullOrWhiteSpace(tb_stid.Text) ||
+                string.IsNullOrWhiteSpace(tb_stname.Text) ||
+                string.IsNullOrWhiteSpace(tb_stnum.Text) ||
+                string.IsNullOrWhiteSpace(tb_stemail.Text) ||
+                cb_stgen.SelectedItem == null)
+            {
+                MessageBox.Show("Please fill all required fields", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (!int.TryParse(tb_stid.Text, out int studentId))
+            {
+                MessageBox.Show("Invalid Student ID", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (!Regex.IsMatch(tb_stnum.Text, @"^\d{10}$"))
+            {
+                MessageBox.Show("Phone number must be exactly 10 digits", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+          
+
             SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-LDJQNC1\SQLEXPRESS;Initial Catalog=sclManagementSystem;Integrated Security=True");
             conn.Open();
 
-            SqlCommand cmd = new SqlCommand("INSERT INTO StudentInfoTb (Student_Id, Student_Name, Dob, Gender, Phone_Num, Email) VALUES (@Student_Id, @Student_Name, @Dob, @Gender, @Phone_Num, @Email)", conn);
+            try
+            {
+                SqlCommand cmd = new SqlCommand("INSERT INTO StudentInfoTb (Student_Id, Student_Name, Dob, Gender, Phone_Num, Email) VALUES (@Student_Id, @Student_Name, @Dob, @Gender, @Phone_Num, @Email)", conn);
 
-            cmd.Parameters.AddWithValue("@Student_Id", int.Parse(tb_stid.Text));
-            cmd.Parameters.AddWithValue("@Student_Name", tb_stname.Text);
-            cmd.Parameters.AddWithValue("@Dob", dtp_stinfo.Value);
-            cmd.Parameters.AddWithValue("@Gender", cb_stgen.SelectedItem.ToString());
-            cmd.Parameters.AddWithValue("@Phone_Num", tb_stnum.Text);
-            cmd.Parameters.AddWithValue("@Email", tb_stemail.Text);
+                cmd.Parameters.AddWithValue("@Student_Id", studentId);
+                cmd.Parameters.AddWithValue("@Student_Name", tb_stname.Text);
+                cmd.Parameters.AddWithValue("@Dob", dtp_stinfo.Value);
+                cmd.Parameters.AddWithValue("@Gender", cb_stgen.SelectedItem.ToString());
+                cmd.Parameters.AddWithValue("@Phone_Num", tb_stnum.Text);
+                cmd.Parameters.AddWithValue("@Email", tb_stemail.Text);
 
-            cmd.ExecuteNonQuery();
+                cmd.ExecuteNonQuery();
 
-            MessageBox.Show("Record Saved Successfully", "Save", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Record Saved Successfully", "Save", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+               
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
         }
 
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+            private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
             dtp_stinfo.CustomFormat = "dd/MM/yyyy";
         }
@@ -177,7 +217,7 @@ namespace SchoolManagementSystem
             }
             catch (Exception ex)
             {
-                MessageBox.Show("An error occurred: " + ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("An error occurred: " + ex.Message," Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
@@ -209,6 +249,31 @@ namespace SchoolManagementSystem
             {
                 conn.Close();
             }
+        }
+
+        private void tb_stemail_TextChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void tb_stemail_Validated(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tb_stemail_Validating(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }

@@ -58,7 +58,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1066, 39);
+            this.panel1.Size = new System.Drawing.Size(1200, 39);
             this.panel1.TabIndex = 0;
             // 
             // button3
@@ -67,7 +67,7 @@
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
             this.button3.ForeColor = System.Drawing.Color.Maroon;
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(993, 2);
+            this.button3.Location = new System.Drawing.Point(1119, 3);
             this.button3.MaximumSize = new System.Drawing.Size(1920, 720);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(31, 30);
@@ -82,7 +82,7 @@
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
             this.button5.ForeColor = System.Drawing.Color.Maroon;
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.Location = new System.Drawing.Point(1030, 3);
+            this.button5.Location = new System.Drawing.Point(1156, 3);
             this.button5.MaximumSize = new System.Drawing.Size(1920, 720);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(32, 30);
@@ -118,7 +118,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 39);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(214, 587);
+            this.panel2.Size = new System.Drawing.Size(214, 681);
             this.panel2.TabIndex = 1;
             // 
             // button2
@@ -266,6 +266,7 @@
             this.btn_student.Text = "Student";
             this.btn_student.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_student.UseVisualStyleBackColor = true;
+            this.btn_student.Click += new System.EventHandler(this.btn_student_Click);
             // 
             // label1
             // 
@@ -295,7 +296,7 @@
             this.BackColor = System.Drawing.Color.Maroon;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1066, 626);
+            this.ClientSize = new System.Drawing.Size(1200, 720);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
