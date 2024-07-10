@@ -96,7 +96,7 @@ namespace SchoolManagementSystem
                 DataTable table = new DataTable();
                 adapter.Fill(table); // Fill the DataTable with the results of the SQL query
 
-                dgv_stinfo.DataSource = table; // Assuming dgv_stinfo is your DataGridView
+                dgv_stinfo.DataSource = table; // Assuming dgv_stinfo DataGridView
             }
             catch (Exception ex)
             {
@@ -106,6 +106,11 @@ namespace SchoolManagementSystem
             {
                 conn.Close();
             }
+        }
+
+        private void dgv_stinfo_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
