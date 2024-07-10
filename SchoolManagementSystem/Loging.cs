@@ -31,13 +31,13 @@ namespace SchoolManagementSystem
 
         private void btn_lg_Click(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection();
-            conn.ConnectionString = " data source = DESKTOP-LDJQNC1\\SQLEXPRESS; database = sclManagementSystem; integrated security=true ";
-            SqlCommand comd = new SqlCommand();
-            comd.Connection = conn;
+            SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-LDJQNC1\SQLEXPRESS;Initial Catalog=sclManagementSystem;Integrated Security=True");
+            conn.Open();
+            string username =tb_uername.Text;
+            string password =tb_password.Text;
+            SqlCommand cmd = new SqlCommand("select Username,Password from logingTb where Username='" + tb_uername.Text + "'and Password='" + tb_password.Text +"' ", conn);
 
-            comd.CommandText = " select * from LogingTb where Username='" + tb_uername.Text + "' and Password ='" + tb_password.Text + "'";
-            SqlDataAdapter dta = new SqlDataAdapter(comd);
+            SqlDataAdapter dta = new SqlDataAdapter(cmd);
             DataSet des = new DataSet();
             dta.Fill(des);
 
