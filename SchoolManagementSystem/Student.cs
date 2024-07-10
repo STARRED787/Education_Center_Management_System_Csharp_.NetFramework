@@ -84,7 +84,28 @@ namespace SchoolManagementSystem
 
         private void bt_add_Click(object sender, EventArgs e)
         {
-           
+            SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-LDJQNC1\SQLEXPRESS;Initial Catalog=sclManagementSystem;Integrated Security=True");
+            conn.Open();
+
+            try
+            {
+                SqlCommand cmd = new SqlCommand("SELECT * FROM StudentInfoTb", conn);
+                SqlDataAdapter adapter = new SqlDataAdapter();
+                adapter.SelectCommand = cmd; // Set the SelectCommand property
+
+                DataTable table = new DataTable();
+                adapter.Fill(table); // Fill the DataTable with the results of the SQL query
+
+                dgv_stinfo.DataSource = table; // Assuming dgv_stinfo is your DataGridView
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
         }
     }
 }
