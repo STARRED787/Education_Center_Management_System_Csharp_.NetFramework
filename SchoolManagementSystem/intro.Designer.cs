@@ -47,9 +47,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(240, 38);
+            this.pictureBox1.Location = new System.Drawing.Point(273, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(80, 80);
+            this.pictureBox1.Size = new System.Drawing.Size(154, 170);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -64,7 +64,7 @@
             // 
             // pl_loading
             // 
-            this.pl_loading.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(48)))), ((int)(((byte)(32)))));
+            this.pl_loading.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.pl_loading.Location = new System.Drawing.Point(2, 273);
             this.pl_loading.Name = "pl_loading";
             this.pl_loading.Size = new System.Drawing.Size(523, 26);
@@ -75,18 +75,18 @@
             this.lb_name.AutoSize = true;
             this.lb_name.Font = new System.Drawing.Font("Crafter", 12F, System.Drawing.FontStyle.Bold);
             this.lb_name.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lb_name.Location = new System.Drawing.Point(116, 151);
+            this.lb_name.Location = new System.Drawing.Point(-1, 207);
             this.lb_name.Name = "lb_name";
-            this.lb_name.Size = new System.Drawing.Size(334, 16);
+            this.lb_name.Size = new System.Drawing.Size(652, 16);
             this.lb_name.TabIndex = 3;
-            this.lb_name.Text = "School Management Systen";
+            this.lb_name.Text = "Gurugedara Educational Insitute Management System ";
             // 
             // intro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(48)))), ((int)(((byte)(32)))));
-            this.ClientSize = new System.Drawing.Size(525, 300);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.ClientSize = new System.Drawing.Size(681, 301);
             this.Controls.Add(this.lb_name);
             this.Controls.Add(this.pl_color);
             this.Controls.Add(this.pictureBox1);

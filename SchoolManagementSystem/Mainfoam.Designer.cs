@@ -51,14 +51,14 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Maroon;
+            this.panel1.BackColor = System.Drawing.Color.DarkRed;
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1200, 39);
+            this.panel1.Size = new System.Drawing.Size(1200, 33);
             this.panel1.TabIndex = 0;
             // 
             // button3
@@ -98,13 +98,13 @@
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label2.Location = new System.Drawing.Point(12, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(277, 16);
+            this.label2.Size = new System.Drawing.Size(380, 16);
             this.label2.TabIndex = 0;
-            this.label2.Text = "Education Center Management System ";
+            this.label2.Text = "Gurugedara Educational Insitute Management System ";
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(48)))), ((int)(((byte)(32)))));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.lgout_lb);
             this.panel2.Controls.Add(this.button1);
@@ -116,9 +116,9 @@
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 39);
+            this.panel2.Location = new System.Drawing.Point(0, 33);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(214, 681);
+            this.panel2.Size = new System.Drawing.Size(226, 687);
             this.panel2.TabIndex = 1;
             // 
             // button2
@@ -132,7 +132,7 @@
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(52, 470);
+            this.button2.Location = new System.Drawing.Point(52, 544);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(130, 43);
             this.button2.TabIndex = 12;
@@ -145,7 +145,7 @@
             this.lgout_lb.AutoSize = true;
             this.lgout_lb.Font = new System.Drawing.Font("Rockwell Extra Bold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lgout_lb.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lgout_lb.Location = new System.Drawing.Point(108, 562);
+            this.lgout_lb.Location = new System.Drawing.Point(109, 635);
             this.lgout_lb.Name = "lgout_lb";
             this.lgout_lb.Size = new System.Drawing.Size(59, 13);
             this.lgout_lb.TabIndex = 11;
@@ -164,7 +164,7 @@
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(52, 542);
+            this.button1.Location = new System.Drawing.Point(53, 615);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(50, 49);
             this.button1.TabIndex = 10;
@@ -184,7 +184,7 @@
             this.btn_dashboard.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btn_dashboard.Image = ((System.Drawing.Image)(resources.GetObject("btn_dashboard.Image")));
             this.btn_dashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_dashboard.Location = new System.Drawing.Point(52, 172);
+            this.btn_dashboard.Location = new System.Drawing.Point(52, 188);
             this.btn_dashboard.Name = "btn_dashboard";
             this.btn_dashboard.Size = new System.Drawing.Size(130, 40);
             this.btn_dashboard.TabIndex = 8;
@@ -204,7 +204,7 @@
             this.btn_grade.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btn_grade.Image = ((System.Drawing.Image)(resources.GetObject("btn_grade.Image")));
             this.btn_grade.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_grade.Location = new System.Drawing.Point(52, 407);
+            this.btn_grade.Location = new System.Drawing.Point(52, 469);
             this.btn_grade.Name = "btn_grade";
             this.btn_grade.Size = new System.Drawing.Size(130, 45);
             this.btn_grade.TabIndex = 6;
@@ -223,7 +223,7 @@
             this.bt_cource.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.bt_cource.Image = ((System.Drawing.Image)(resources.GetObject("bt_cource.Image")));
             this.bt_cource.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bt_cource.Location = new System.Drawing.Point(52, 345);
+            this.bt_cource.Location = new System.Drawing.Point(52, 396);
             this.bt_cource.Name = "bt_cource";
             this.bt_cource.Size = new System.Drawing.Size(130, 44);
             this.bt_cource.TabIndex = 5;
@@ -241,7 +241,7 @@
             this.btn_teachers.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btn_teachers.Image = ((System.Drawing.Image)(resources.GetObject("btn_teachers.Image")));
             this.btn_teachers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_teachers.Location = new System.Drawing.Point(52, 291);
+            this.btn_teachers.Location = new System.Drawing.Point(52, 331);
             this.btn_teachers.Name = "btn_teachers";
             this.btn_teachers.Size = new System.Drawing.Size(130, 38);
             this.btn_teachers.TabIndex = 4;
@@ -259,7 +259,7 @@
             this.btn_student.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btn_student.Image = ((System.Drawing.Image)(resources.GetObject("btn_student.Image")));
             this.btn_student.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_student.Location = new System.Drawing.Point(52, 229);
+            this.btn_student.Location = new System.Drawing.Point(52, 258);
             this.btn_student.Name = "btn_student";
             this.btn_student.Size = new System.Drawing.Size(130, 45);
             this.btn_student.TabIndex = 3;
@@ -273,7 +273,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Rockwell Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(37, 135);
+            this.label1.Location = new System.Drawing.Point(64, 156);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(118, 19);
             this.label1.TabIndex = 1;
@@ -282,9 +282,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(52, 20);
+            this.pictureBox1.Location = new System.Drawing.Point(53, 6);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 100);
+            this.pictureBox1.Size = new System.Drawing.Size(130, 135);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;

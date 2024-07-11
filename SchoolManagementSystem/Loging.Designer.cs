@@ -67,9 +67,9 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label1.Location = new System.Drawing.Point(4, 4);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(253, 16);
+            this.label1.Size = new System.Drawing.Size(380, 16);
             this.label1.TabIndex = 1;
-            this.label1.Text = "School Management System | Login";
+            this.label1.Text = "Gurugedara Educational Insitute Management System ";
             // 
             // bt_close
             // 
@@ -154,6 +154,7 @@
             // btn_lg
             // 
             this.btn_lg.BackColor = System.Drawing.Color.Green;
+            this.btn_lg.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_lg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_lg.Font = new System.Drawing.Font("Big John", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_lg.Location = new System.Drawing.Point(73, 268);
@@ -219,7 +220,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(48)))), ((int)(((byte)(32)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(700, 450);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pl_head);
