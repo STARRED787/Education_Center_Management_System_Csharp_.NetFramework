@@ -141,7 +141,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 57);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(725, 351);
+            this.groupBox1.Size = new System.Drawing.Size(713, 351);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Student Information";
@@ -164,7 +164,7 @@
             this.cb_stgen.Items.AddRange(new object[] {
             "Male",
             "Female"});
-            this.cb_stgen.Location = new System.Drawing.Point(151, 159);
+            this.cb_stgen.Location = new System.Drawing.Point(140, 157);
             this.cb_stgen.Name = "cb_stgen";
             this.cb_stgen.Size = new System.Drawing.Size(320, 26);
             this.cb_stgen.TabIndex = 21;
@@ -173,7 +173,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(490, 43);
+            this.pictureBox1.Location = new System.Drawing.Point(479, 41);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(220, 219);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -183,7 +183,7 @@
             // dtp_stinfo
             // 
             this.dtp_stinfo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtp_stinfo.Location = new System.Drawing.Point(151, 118);
+            this.dtp_stinfo.Location = new System.Drawing.Point(140, 116);
             this.dtp_stinfo.Name = "dtp_stinfo";
             this.dtp_stinfo.Size = new System.Drawing.Size(320, 25);
             this.dtp_stinfo.TabIndex = 18;
@@ -252,7 +252,7 @@
             // 
             // tb_stemail
             // 
-            this.tb_stemail.Location = new System.Drawing.Point(151, 240);
+            this.tb_stemail.Location = new System.Drawing.Point(140, 238);
             this.tb_stemail.Name = "tb_stemail";
             this.tb_stemail.Size = new System.Drawing.Size(320, 25);
             this.tb_stemail.TabIndex = 11;
@@ -262,21 +262,21 @@
             // 
             // tb_stnum
             // 
-            this.tb_stnum.Location = new System.Drawing.Point(151, 198);
+            this.tb_stnum.Location = new System.Drawing.Point(140, 196);
             this.tb_stnum.Name = "tb_stnum";
             this.tb_stnum.Size = new System.Drawing.Size(320, 25);
             this.tb_stnum.TabIndex = 10;
             // 
             // tb_stname
             // 
-            this.tb_stname.Location = new System.Drawing.Point(151, 75);
+            this.tb_stname.Location = new System.Drawing.Point(140, 73);
             this.tb_stname.Name = "tb_stname";
             this.tb_stname.Size = new System.Drawing.Size(320, 25);
             this.tb_stname.TabIndex = 7;
             // 
             // tb_stid
             // 
-            this.tb_stid.Location = new System.Drawing.Point(151, 36);
+            this.tb_stid.Location = new System.Drawing.Point(140, 34);
             this.tb_stid.Name = "tb_stid";
             this.tb_stid.Size = new System.Drawing.Size(320, 25);
             this.tb_stid.TabIndex = 6;
@@ -285,7 +285,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(17, 244);
+            this.label8.Location = new System.Drawing.Point(6, 242);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(52, 18);
             this.label8.TabIndex = 5;
@@ -295,7 +295,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(17, 205);
+            this.label7.Location = new System.Drawing.Point(6, 203);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(119, 18);
             this.label7.TabIndex = 4;
@@ -305,7 +305,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(17, 166);
+            this.label6.Location = new System.Drawing.Point(6, 164);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(64, 18);
             this.label6.TabIndex = 3;
@@ -315,7 +315,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(17, 129);
+            this.label5.Location = new System.Drawing.Point(6, 127);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(105, 18);
             this.label5.TabIndex = 2;
@@ -325,7 +325,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(17, 82);
+            this.label4.Location = new System.Drawing.Point(6, 80);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(111, 18);
             this.label4.TabIndex = 1;
@@ -335,7 +335,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(17, 43);
+            this.label3.Location = new System.Drawing.Point(6, 41);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(81, 18);
             this.label3.TabIndex = 0;
@@ -343,7 +343,7 @@
             // 
             // dgv_stinfo
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(216)))), ((int)(((byte)(189)))));
             this.dgv_stinfo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_stinfo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_stinfo.BackgroundColor = System.Drawing.Color.White;
@@ -351,7 +351,7 @@
             this.dgv_stinfo.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgv_stinfo.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(34)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
@@ -360,43 +360,43 @@
             this.dgv_stinfo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_stinfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(229)))), ((int)(((byte)(211)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(169)))), ((int)(((byte)(107)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgv_stinfo.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_stinfo.EnableHeadersVisualStyles = false;
-            this.dgv_stinfo.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgv_stinfo.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(209)))), ((int)(((byte)(177)))));
             this.dgv_stinfo.Location = new System.Drawing.Point(12, 414);
             this.dgv_stinfo.Name = "dgv_stinfo";
             this.dgv_stinfo.RowHeadersVisible = false;
             this.dgv_stinfo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_stinfo.Size = new System.Drawing.Size(713, 210);
             this.dgv_stinfo.TabIndex = 24;
-            this.dgv_stinfo.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
-            this.dgv_stinfo.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgv_stinfo.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Carrot;
+            this.dgv_stinfo.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(216)))), ((int)(((byte)(189)))));
             this.dgv_stinfo.ThemeStyle.AlternatingRowsStyle.Font = null;
             this.dgv_stinfo.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
             this.dgv_stinfo.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
             this.dgv_stinfo.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
             this.dgv_stinfo.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.dgv_stinfo.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgv_stinfo.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dgv_stinfo.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(209)))), ((int)(((byte)(177)))));
+            this.dgv_stinfo.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(34)))));
             this.dgv_stinfo.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgv_stinfo.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgv_stinfo.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.dgv_stinfo.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgv_stinfo.ThemeStyle.HeaderStyle.Height = 23;
             this.dgv_stinfo.ThemeStyle.ReadOnly = false;
-            this.dgv_stinfo.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgv_stinfo.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(229)))), ((int)(((byte)(211)))));
             this.dgv_stinfo.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgv_stinfo.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgv_stinfo.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgv_stinfo.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
             this.dgv_stinfo.ThemeStyle.RowsStyle.Height = 22;
-            this.dgv_stinfo.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgv_stinfo.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgv_stinfo.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(169)))), ((int)(((byte)(107)))));
+            this.dgv_stinfo.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             // 
             // Student
             // 
