@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Text.RegularExpressions;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 
 namespace SchoolManagementSystem
@@ -34,8 +35,28 @@ namespace SchoolManagementSystem
 
         private void Student_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'sclManagementSystemDataSet.StudentInfoTb' table. You can move, or remove it, as needed.
-            this.studentInfoTbTableAdapter.Fill(this.sclManagementSystemDataSet.StudentInfoTb);
+            SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-LDJQNC1\SQLEXPRESS;Initial Catalog=sclManagementSystem;Integrated Security=True");
+            conn.Open();
+
+            try
+            {
+                SqlCommand cmd = new SqlCommand("SELECT * FROM StudentInfoTb", conn);
+                SqlDataAdapter adapter = new SqlDataAdapter();
+                adapter.SelectCommand = cmd; // Set the SelectCommand property
+
+                DataTable table = new DataTable();
+                adapter.Fill(table); // Fill the DataTable with the results of the SQL query
+
+                dgv_stinfo.DataSource = table; // Assuming dgv_stinfo DataGridView
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
 
         }
 
@@ -79,7 +100,7 @@ namespace SchoolManagementSystem
                 return;
             }
 
-          
+
 
             SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-LDJQNC1\SQLEXPRESS;Initial Catalog=sclManagementSystem;Integrated Security=True");
             conn.Open();
@@ -99,7 +120,6 @@ namespace SchoolManagementSystem
 
                 MessageBox.Show("Record Saved Successfully", "Save", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-               
             }
             catch (Exception ex)
             {
@@ -111,7 +131,7 @@ namespace SchoolManagementSystem
             }
         }
 
-            private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
             dtp_stinfo.CustomFormat = "dd/MM/yyyy";
         }
@@ -219,7 +239,7 @@ namespace SchoolManagementSystem
             }
             catch (Exception ex)
             {
-                MessageBox.Show("An error occurred: " + ex.Message," Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("An error occurred: " + ex.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
@@ -229,33 +249,36 @@ namespace SchoolManagementSystem
 
         private void bt_display_Click(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-LDJQNC1\SQLEXPRESS;Initial Catalog=sclManagementSystem;Integrated Security=True");
-            conn.Open();
-
             try
             {
-                SqlCommand cmd = new SqlCommand("SELECT * FROM StudentInfoTb", conn);
-                SqlDataAdapter adapter = new SqlDataAdapter();
-                adapter.SelectCommand = cmd; // Set the SelectCommand property
+                using (SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-LDJQNC1\SQLEXPRESS;Initial Catalog=sclManagementSystem;Integrated Security=True"))
+                {
+                    conn.Open();
 
-                DataTable table = new DataTable();
-                adapter.Fill(table); // Fill the DataTable with the results of the SQL query
+                    string sql = "SELECT Student_Id, Student_Name, Dob, Gender, Phone_Num, Email FROM StudentInfoTb";
 
-                dgv_stinfo.DataSource = table; // Assuming dgv_stinfo DataGridView
+                    SqlCommand cmd = new SqlCommand(sql, conn); // Create SqlCommand with the SQL query
+
+                    SqlDataAdapter adapter = new SqlDataAdapter(cmd); // Create SqlDataAdapter with the SqlCommand
+
+                    DataTable table = new DataTable();
+                    adapter.Fill(table); // Fill the DataTable with the results of the SQL query
+
+                    dgv_stinfo.DataSource = table; // Assuming dgv_stinfo is a DataGridView
+
+                    // Optional: Auto-resize columns to fit content
+                    dgv_stinfo.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("An error occurred: " + ex.Message);
-            }
-            finally
-            {
-                conn.Close();
+                MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void tb_stemail_TextChanged(object sender, EventArgs e)
         {
-           
+
         }
 
         private void tb_stemail_Validated(object sender, EventArgs e)
@@ -277,5 +300,45 @@ namespace SchoolManagementSystem
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void dgv_stinfo_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+            {
+                DataGridViewRow row = dgv_stinfo.Rows[e.RowIndex];
+
+                // Ensure the column names match exactly with those in the DataTable
+                tb_stid.Text = row.Cells["Student_Id"].Value.ToString();
+                tb_stname.Text = row.Cells["Student_Name"].Value.ToString();
+                dtp_stinfo.Value = Convert.ToDateTime(row.Cells["Dob"].Value);
+
+                object genderValue = row.Cells["Gender"].Value;
+                if (genderValue != null)
+                {
+                    string genderString = genderValue.ToString();
+
+                    // Ensure the ComboBox has items that match the gender values
+                    if (cb_stgen.Items.Contains(genderString))
+                    {
+                        cb_stgen.SelectedItem = genderString;
+                    }
+                    else
+                    {
+
+                        cb_stgen.SelectedItem = null;
+                    }
+
+                    tb_stnum.Text = row.Cells["Phone_Num"].Value.ToString();
+                    tb_stemail.Text = row.Cells["Email"].Value.ToString();
+                }
+
+            }
+
+        }
     }
-}
+    }
+
+
+
+
+
