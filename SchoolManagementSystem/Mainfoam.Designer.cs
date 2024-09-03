@@ -44,6 +44,7 @@
             this.btn_student = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button4 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -105,6 +106,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.panel2.Controls.Add(this.button4);
             this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.lgout_lb);
             this.panel2.Controls.Add(this.button1);
@@ -132,7 +134,7 @@
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(52, 544);
+            this.button2.Location = new System.Drawing.Point(53, 564);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(130, 43);
             this.button2.TabIndex = 12;
@@ -145,7 +147,7 @@
             this.lgout_lb.AutoSize = true;
             this.lgout_lb.Font = new System.Drawing.Font("Rockwell Extra Bold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lgout_lb.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lgout_lb.Location = new System.Drawing.Point(109, 635);
+            this.lgout_lb.Location = new System.Drawing.Point(110, 655);
             this.lgout_lb.Name = "lgout_lb";
             this.lgout_lb.Size = new System.Drawing.Size(59, 13);
             this.lgout_lb.TabIndex = 11;
@@ -164,7 +166,7 @@
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(53, 615);
+            this.button1.Location = new System.Drawing.Point(54, 635);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(50, 49);
             this.button1.TabIndex = 10;
@@ -204,7 +206,7 @@
             this.btn_grade.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btn_grade.Image = ((System.Drawing.Image)(resources.GetObject("btn_grade.Image")));
             this.btn_grade.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_grade.Location = new System.Drawing.Point(52, 469);
+            this.btn_grade.Location = new System.Drawing.Point(53, 500);
             this.btn_grade.Name = "btn_grade";
             this.btn_grade.Size = new System.Drawing.Size(130, 45);
             this.btn_grade.TabIndex = 6;
@@ -223,7 +225,7 @@
             this.bt_cource.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.bt_cource.Image = ((System.Drawing.Image)(resources.GetObject("bt_cource.Image")));
             this.bt_cource.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bt_cource.Location = new System.Drawing.Point(52, 396);
+            this.bt_cource.Location = new System.Drawing.Point(54, 439);
             this.bt_cource.Name = "bt_cource";
             this.bt_cource.Size = new System.Drawing.Size(130, 44);
             this.bt_cource.TabIndex = 5;
@@ -241,7 +243,7 @@
             this.btn_teachers.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btn_teachers.Image = ((System.Drawing.Image)(resources.GetObject("btn_teachers.Image")));
             this.btn_teachers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_teachers.Location = new System.Drawing.Point(52, 331);
+            this.btn_teachers.Location = new System.Drawing.Point(54, 378);
             this.btn_teachers.Name = "btn_teachers";
             this.btn_teachers.Size = new System.Drawing.Size(130, 38);
             this.btn_teachers.TabIndex = 4;
@@ -259,7 +261,7 @@
             this.btn_student.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btn_student.Image = ((System.Drawing.Image)(resources.GetObject("btn_student.Image")));
             this.btn_student.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_student.Location = new System.Drawing.Point(52, 258);
+            this.btn_student.Location = new System.Drawing.Point(54, 311);
             this.btn_student.Name = "btn_student";
             this.btn_student.Size = new System.Drawing.Size(130, 45);
             this.btn_student.TabIndex = 3;
@@ -288,6 +290,26 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // button4
+            // 
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Rockwell Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.Location = new System.Drawing.Point(53, 249);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(130, 40);
+            this.button4.TabIndex = 13;
+            this.button4.Text = "Subjects";
+            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button4.UseVisualStyleBackColor = true;
             // 
             // Mainfoam
             // 
@@ -329,5 +351,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button4;
     }
 }
