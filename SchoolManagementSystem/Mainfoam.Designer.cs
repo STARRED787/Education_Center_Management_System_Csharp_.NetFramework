@@ -34,17 +34,16 @@
             this.button5 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.lgout_lb = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.btn_dashboard = new System.Windows.Forms.Button();
             this.btn_grade = new System.Windows.Forms.Button();
-            this.bt_cource = new System.Windows.Forms.Button();
             this.btn_teachers = new System.Windows.Forms.Button();
             this.btn_student = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button4 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -112,7 +111,6 @@
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.btn_dashboard);
             this.panel2.Controls.Add(this.btn_grade);
-            this.panel2.Controls.Add(this.bt_cource);
             this.panel2.Controls.Add(this.btn_teachers);
             this.panel2.Controls.Add(this.btn_student);
             this.panel2.Controls.Add(this.label1);
@@ -122,6 +120,26 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(226, 687);
             this.panel2.TabIndex = 1;
+            // 
+            // button4
+            // 
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Rockwell Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.Location = new System.Drawing.Point(54, 266);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(130, 40);
+            this.button4.TabIndex = 13;
+            this.button4.Text = "Subjects";
+            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button4.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
@@ -206,32 +224,13 @@
             this.btn_grade.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btn_grade.Image = ((System.Drawing.Image)(resources.GetObject("btn_grade.Image")));
             this.btn_grade.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_grade.Location = new System.Drawing.Point(53, 500);
+            this.btn_grade.Location = new System.Drawing.Point(54, 489);
             this.btn_grade.Name = "btn_grade";
             this.btn_grade.Size = new System.Drawing.Size(130, 45);
             this.btn_grade.TabIndex = 6;
             this.btn_grade.Text = "Enrollment";
             this.btn_grade.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_grade.UseVisualStyleBackColor = true;
-            // 
-            // bt_cource
-            // 
-            this.bt_cource.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.bt_cource.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bt_cource.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.bt_cource.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
-            this.bt_cource.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_cource.Font = new System.Drawing.Font("Rockwell Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_cource.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.bt_cource.Image = ((System.Drawing.Image)(resources.GetObject("bt_cource.Image")));
-            this.bt_cource.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bt_cource.Location = new System.Drawing.Point(54, 439);
-            this.bt_cource.Name = "bt_cource";
-            this.bt_cource.Size = new System.Drawing.Size(130, 44);
-            this.bt_cource.TabIndex = 5;
-            this.bt_cource.Text = "Section";
-            this.bt_cource.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.bt_cource.UseVisualStyleBackColor = true;
             // 
             // btn_teachers
             // 
@@ -243,7 +242,7 @@
             this.btn_teachers.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btn_teachers.Image = ((System.Drawing.Image)(resources.GetObject("btn_teachers.Image")));
             this.btn_teachers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_teachers.Location = new System.Drawing.Point(54, 378);
+            this.btn_teachers.Location = new System.Drawing.Point(53, 419);
             this.btn_teachers.Name = "btn_teachers";
             this.btn_teachers.Size = new System.Drawing.Size(130, 38);
             this.btn_teachers.TabIndex = 4;
@@ -261,7 +260,7 @@
             this.btn_student.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btn_student.Image = ((System.Drawing.Image)(resources.GetObject("btn_student.Image")));
             this.btn_student.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_student.Location = new System.Drawing.Point(54, 311);
+            this.btn_student.Location = new System.Drawing.Point(53, 338);
             this.btn_student.Name = "btn_student";
             this.btn_student.Size = new System.Drawing.Size(130, 45);
             this.btn_student.TabIndex = 3;
@@ -291,26 +290,6 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // button4
-            // 
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Rockwell Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(53, 249);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(130, 40);
-            this.button4.TabIndex = 13;
-            this.button4.Text = "Subjects";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button4.UseVisualStyleBackColor = true;
-            // 
             // Mainfoam
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -339,7 +318,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btn_grade;
-        private System.Windows.Forms.Button bt_cource;
         private System.Windows.Forms.Button btn_teachers;
         private System.Windows.Forms.Button btn_student;
         private System.Windows.Forms.Label label1;

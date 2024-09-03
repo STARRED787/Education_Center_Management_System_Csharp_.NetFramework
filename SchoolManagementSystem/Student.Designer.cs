@@ -38,6 +38,10 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cb_stsubsec = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.tb_stsub = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.bt_stclear = new System.Windows.Forms.Button();
             this.cb_stgen = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -126,6 +130,10 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cb_stsubsec);
+            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.tb_stsub);
+            this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.bt_stclear);
             this.groupBox1.Controls.Add(this.cb_stgen);
             this.groupBox1.Controls.Add(this.pictureBox1);
@@ -148,17 +156,58 @@
             this.groupBox1.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 57);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(713, 351);
+            this.groupBox1.Size = new System.Drawing.Size(713, 392);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Student Information";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // cb_stsubsec
+            // 
+            this.cb_stsubsec.FormattingEnabled = true;
+            this.cb_stsubsec.Items.AddRange(new object[] {
+            "Primary",
+            "Secondary",
+            "O/L",
+            "A/L"});
+            this.cb_stsubsec.Location = new System.Drawing.Point(140, 315);
+            this.cb_stsubsec.Name = "cb_stsubsec";
+            this.cb_stsubsec.Size = new System.Drawing.Size(320, 26);
+            this.cb_stsubsec.TabIndex = 35;
+            this.cb_stsubsec.Text = "Select";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(9, 315);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(118, 18);
+            this.label9.TabIndex = 34;
+            this.label9.Text = "Subejct Section";
+            // 
+            // tb_stsub
+            // 
+            this.tb_stsub.Location = new System.Drawing.Point(143, 275);
+            this.tb_stsub.Name = "tb_stsub";
+            this.tb_stsub.Size = new System.Drawing.Size(320, 25);
+            this.tb_stsub.TabIndex = 33;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(9, 279);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(61, 18);
+            this.label2.TabIndex = 32;
+            this.label2.Text = "Subject";
+            // 
             // bt_stclear
             // 
             this.bt_stclear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.bt_stclear.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_stclear.Location = new System.Drawing.Point(383, 300);
+            this.bt_stclear.Location = new System.Drawing.Point(379, 352);
             this.bt_stclear.Name = "bt_stclear";
             this.bt_stclear.Size = new System.Drawing.Size(88, 34);
             this.bt_stclear.TabIndex = 22;
@@ -204,7 +253,7 @@
             // 
             this.bt_display.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.bt_display.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_display.Location = new System.Drawing.Point(622, 300);
+            this.bt_display.Location = new System.Drawing.Point(618, 352);
             this.bt_display.Name = "bt_display";
             this.bt_display.Size = new System.Drawing.Size(88, 34);
             this.bt_display.TabIndex = 17;
@@ -216,7 +265,7 @@
             // 
             this.bt_delete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.bt_delete.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_delete.Location = new System.Drawing.Point(507, 300);
+            this.bt_delete.Location = new System.Drawing.Point(503, 352);
             this.bt_delete.Name = "bt_delete";
             this.bt_delete.Size = new System.Drawing.Size(88, 34);
             this.bt_delete.TabIndex = 15;
@@ -228,7 +277,7 @@
             // 
             this.bt_update.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.bt_update.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_update.Location = new System.Drawing.Point(132, 300);
+            this.bt_update.Location = new System.Drawing.Point(128, 352);
             this.bt_update.Name = "bt_update";
             this.bt_update.Size = new System.Drawing.Size(88, 34);
             this.bt_update.TabIndex = 14;
@@ -240,7 +289,7 @@
             // 
             this.bt_add.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.bt_add.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_add.Location = new System.Drawing.Point(257, 300);
+            this.bt_add.Location = new System.Drawing.Point(253, 352);
             this.bt_add.Name = "bt_add";
             this.bt_add.Size = new System.Drawing.Size(88, 34);
             this.bt_add.TabIndex = 13;
@@ -252,7 +301,7 @@
             // 
             this.bt_save.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.bt_save.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_save.Location = new System.Drawing.Point(20, 300);
+            this.bt_save.Location = new System.Drawing.Point(16, 352);
             this.bt_save.Name = "bt_save";
             this.bt_save.Size = new System.Drawing.Size(88, 34);
             this.bt_save.TabIndex = 12;
@@ -388,7 +437,7 @@
             this.dgv_stinfo.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgv_stinfo.EnableHeadersVisualStyles = false;
             this.dgv_stinfo.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(203)))), ((int)(((byte)(186)))));
-            this.dgv_stinfo.Location = new System.Drawing.Point(12, 414);
+            this.dgv_stinfo.Location = new System.Drawing.Point(12, 465);
             this.dgv_stinfo.Name = "dgv_stinfo";
             this.dgv_stinfo.RowHeadersVisible = false;
             this.dgv_stinfo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -437,7 +486,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(737, 636);
+            this.ClientSize = new System.Drawing.Size(737, 687);
             this.Controls.Add(this.dgv_stinfo);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel2);
@@ -487,5 +536,9 @@
         private sclManagementSystemDataSet sclManagementSystemDataSet;
         private System.Windows.Forms.BindingSource studentInfoTbBindingSource;
         private sclManagementSystemDataSetTableAdapters.StudentInfoTbTableAdapter studentInfoTbTableAdapter;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox tb_stsub;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox cb_stsubsec;
     }
 }

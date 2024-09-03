@@ -40,7 +40,7 @@ namespace SchoolManagementSystem
 
             try
             {
-                SqlCommand cmd = new SqlCommand("SELECT * FROM StudentInfoTb", conn);
+                SqlCommand cmd = new SqlCommand("SELECT * FROM StudentInfoTbl", conn);
                 SqlDataAdapter adapter = new SqlDataAdapter();
                 adapter.SelectCommand = cmd; // Set the SelectCommand property
 
@@ -82,9 +82,11 @@ namespace SchoolManagementSystem
                 string.IsNullOrWhiteSpace(tb_stname.Text) ||
                 string.IsNullOrWhiteSpace(tb_stnum.Text) ||
                 string.IsNullOrWhiteSpace(tb_stemail.Text) ||
-                cb_stgen.SelectedItem == null)
+                string.IsNullOrWhiteSpace(tb_stsub.Text) ||
+                cb_stgen.SelectedItem == null ||
+                cb_stsubsec.SelectedItem == null) // Ensure at least one section is selected
             {
-                MessageBox.Show("Please fill all required fields", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please fill all required fields and select at least one section", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -100,35 +102,34 @@ namespace SchoolManagementSystem
                 return;
             }
 
-
-
-            SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-LDJQNC1\SQLEXPRESS;Initial Catalog=sclManagementSystem;Integrated Security=True");
-            conn.Open();
-
-            try
+            using (SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-LDJQNC1\SQLEXPRESS;Initial Catalog=sclManagementSystem;Integrated Security=True"))
             {
-                SqlCommand cmd = new SqlCommand("INSERT INTO StudentInfoTb (Student_Id, Student_Name, Dob, Gender, Phone_Num, Email) VALUES (@Student_Id, @Student_Name, @Dob, @Gender, @Phone_Num, @Email)", conn);
+                try
+                {
+                    conn.Open();
 
-                cmd.Parameters.AddWithValue("@Student_Id", studentId);
-                cmd.Parameters.AddWithValue("@Student_Name", tb_stname.Text);
-                cmd.Parameters.AddWithValue("@Dob", dtp_stinfo.Value);
-                cmd.Parameters.AddWithValue("@Gender", cb_stgen.SelectedItem.ToString());
-                cmd.Parameters.AddWithValue("@Phone_Num", tb_stnum.Text);
-                cmd.Parameters.AddWithValue("@Email", tb_stemail.Text);
+                    SqlCommand cmd = new SqlCommand("INSERT INTO StudentInfoTbl (Student_Id, Student_Name, Dob, Gender, Phone_Num, Email, Subject, Subject_Section) VALUES (@Student_Id, @Student_Name, @Dob, @Gender, @Phone_Num, @Email, @Subject, @Subject_Section)", conn);
 
-                cmd.ExecuteNonQuery();
+                    cmd.Parameters.AddWithValue("@Student_Id", studentId);
+                    cmd.Parameters.AddWithValue("@Student_Name", tb_stname.Text);
+                    cmd.Parameters.AddWithValue("@Dob", dtp_stinfo.Value);
+                    cmd.Parameters.AddWithValue("@Gender", cb_stgen.SelectedItem.ToString());
+                    cmd.Parameters.AddWithValue("@Phone_Num", tb_stnum.Text);
+                    cmd.Parameters.AddWithValue("@Email", tb_stemail.Text);
+                    cmd.Parameters.AddWithValue("@Subject", tb_stsub.Text); // Add Subject parameter
+                    cmd.Parameters.AddWithValue("@Subject_Section", cb_stsubsec.SelectedItem.ToString()); // Corrected to use cb_stsubsec.SelectedItem.ToString()
 
-                MessageBox.Show("Record Saved Successfully", "Save", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    cmd.ExecuteNonQuery();
 
+                    MessageBox.Show("Record Saved Successfully", "Save", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("An error occurred: " + ex.Message);
+                }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("An error occurred: " + ex.Message);
-            }
-            finally
-            {
-                conn.Close();
-            }
+
+
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
@@ -151,7 +152,7 @@ namespace SchoolManagementSystem
 
             try
             {
-                SqlCommand cmd = new SqlCommand("SELECT * FROM StudentInfoTb", conn);
+                SqlCommand cmd = new SqlCommand("SELECT * FROM StudentInfoTbl", conn);
                 SqlDataAdapter adapter = new SqlDataAdapter();
                 adapter.SelectCommand = cmd; // Set the SelectCommand property
 
@@ -177,32 +178,73 @@ namespace SchoolManagementSystem
 
         private void bt_update_Click(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-LDJQNC1\SQLEXPRESS;Initial Catalog=sclManagementSystem;Integrated Security=True");
-            conn.Open();
-
-            try
+            // Basic validation checks
+            if (string.IsNullOrWhiteSpace(tb_stid.Text) ||
+                string.IsNullOrWhiteSpace(tb_stname.Text) ||
+                string.IsNullOrWhiteSpace(tb_stnum.Text) ||
+                string.IsNullOrWhiteSpace(tb_stemail.Text) ||
+                string.IsNullOrWhiteSpace(tb_stsub.Text) ||
+                cb_stgen.SelectedItem == null ||
+                cb_stsubsec.SelectedItem == null)  // Ensure at least one section is selected
             {
-                SqlCommand cmd = new SqlCommand("UPDATE StudentInfoTb SET Student_Name = @Student_Name, Dob = @Dob, Gender = @Gender, Phone_Num = @Phone_Num, Email = @Email WHERE Student_Id = @Student_Id", conn);
-
-                cmd.Parameters.AddWithValue("@Student_Id", int.Parse(tb_stid.Text));
-                cmd.Parameters.AddWithValue("@Student_Name", tb_stname.Text);
-                cmd.Parameters.AddWithValue("@Dob", dtp_stinfo.Value);
-                cmd.Parameters.AddWithValue("@Gender", cb_stgen.SelectedItem.ToString());
-                cmd.Parameters.AddWithValue("@Phone_Num", tb_stnum.Text);
-                cmd.Parameters.AddWithValue("@Email", tb_stemail.Text);
-
-                cmd.ExecuteNonQuery();
-
-                MessageBox.Show("Record Updated Successfully", "Update", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Please fill all required fields and select at least one section", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
-            catch (Exception ex)
+
+            if (!int.TryParse(tb_stid.Text, out int studentId))
             {
-                MessageBox.Show("An error occurred: " + ex.Message);
+                MessageBox.Show("Invalid Student ID", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
-            finally
+
+            if (!Regex.IsMatch(tb_stnum.Text, @"^\d{10}$"))
             {
-                conn.Close();
+                MessageBox.Show("Phone number must be exactly 10 digits", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
+
+            using (SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-LDJQNC1\SQLEXPRESS;Initial Catalog=sclManagementSystem;Integrated Security=True"))
+            {
+                try
+                {
+                    conn.Open();
+
+                    // Check if record exists
+                    SqlCommand checkCmd = new SqlCommand("SELECT COUNT(*) FROM StudentInfoTbl WHERE Student_Id = @Student_Id", conn);
+                    checkCmd.Parameters.AddWithValue("@Student_Id", studentId);
+
+                    int count = (int)checkCmd.ExecuteScalar();
+
+                    if (count > 0)
+                    {
+                        // Update the existing record
+                        SqlCommand updateCmd = new SqlCommand("UPDATE StudentInfoTbl SET Student_Name = @Student_Name, Dob = @Dob, Gender = @Gender, Phone_Num = @Phone_Num, Email = @Email, Subject = @Subject, Subject_Section = @Subject_Section WHERE Student_Id = @Student_Id", conn);
+
+                        updateCmd.Parameters.AddWithValue("@Student_Id", studentId); // Corrected parameter name
+                        updateCmd.Parameters.AddWithValue("@Student_Name", tb_stname.Text); // Corrected parameter name
+                        updateCmd.Parameters.AddWithValue("@Dob", dtp_stinfo.Value);
+                        updateCmd.Parameters.AddWithValue("@Gender", cb_stgen.SelectedItem.ToString());
+                        updateCmd.Parameters.AddWithValue("@Phone_Num", tb_stnum.Text);
+                        updateCmd.Parameters.AddWithValue("@Email", tb_stemail.Text);
+                        updateCmd.Parameters.AddWithValue("@Subject", tb_stsub.Text);
+                        updateCmd.Parameters.AddWithValue("@Subject_Section", cb_stsubsec.SelectedItem.ToString()); // Added parameter for Subject_Section
+
+                        updateCmd.ExecuteNonQuery();
+
+                        MessageBox.Show("Record Updated Successfully", "Update", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Record not found with the provided Student ID", "Update Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("An error occurred: " + ex.Message);
+                }
+            }
+
+
         }
 
         private void bt_stclear_Click(object sender, EventArgs e)
@@ -213,6 +255,8 @@ namespace SchoolManagementSystem
             cb_stgen.SelectedIndex = -1; // Deselect any selected item
             tb_stnum.Clear();
             tb_stemail.Clear();
+            tb_stsub.Clear();
+            cb_stsubsec.SelectedIndex = -1;
         }
 
         private void bt_delete_Click(object sender, EventArgs e)
@@ -222,7 +266,7 @@ namespace SchoolManagementSystem
 
             try
             {
-                SqlCommand cmd = new SqlCommand("DELETE FROM StudentInfoTb WHERE Student_Id = @Student_Id", conn);
+                SqlCommand cmd = new SqlCommand("DELETE FROM StudentInfoTbl WHERE Student_Id = @Student_Id", conn);
 
                 cmd.Parameters.AddWithValue("@Student_Id", int.Parse(tb_stid.Text));
 
@@ -255,7 +299,7 @@ namespace SchoolManagementSystem
                 {
                     conn.Open();
 
-                    string sql = "SELECT Student_Id, Student_Name, Dob, Gender, Phone_Num, Email FROM StudentInfoTb";
+                    string sql = "SELECT Student_Id, Student_Name, Dob, Gender, Phone_Num, Email, Subject, Subject_Section FROM StudentInfoTbl";
 
                     SqlCommand cmd = new SqlCommand(sql, conn); // Create SqlCommand with the SQL query
 
@@ -303,7 +347,29 @@ namespace SchoolManagementSystem
 
         private void dgv_stinfo_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
-          
+                // Ensure the click is on a valid row (not header row)
+                if (e.RowIndex >= 0)
+                {
+                    // Get the DataGridViewRow object for the clicked row
+                    DataGridViewRow row = dgv_stinfo.Rows[e.RowIndex];
+
+                    // Populate the textboxes with the values from the selected row
+                    tb_stid.Text = row.Cells["Student_Id"].Value.ToString();
+                    tb_stname.Text = row.Cells["Student_Name"].Value.ToString();
+                    dtp_stinfo.Value = Convert.ToDateTime(row.Cells["Dob"].Value);
+                    tb_stnum.Text = row.Cells["Phone_Num"].Value.ToString();
+                    tb_stemail.Text = row.Cells["Email"].Value.ToString();
+                tb_stsub.Text = row.Cells["Subject"].Value.ToString();
+
+                // Set the ComboBox for Gender
+                string gender = row.Cells["Gender"].Value.ToString();
+                    cb_stgen.SelectedItem = gender;
+                 
+                string subsec = row.Cells["Subject_Section"].Value.ToString();
+                cb_stsubsec.SelectedItem = subsec;
+            }
+            
+
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)

@@ -73,7 +73,29 @@ namespace SchoolManagementSystem
 
         private void dgv_subinfo_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+            // Ensure the click is on a valid row and not a header
+            if (e.RowIndex >= 0)
+            {
+                // Get the DataGridViewRow object for the clicked row
+                DataGridViewRow row = dgv_subinfo.Rows[e.RowIndex];
+
+                // Populate the textboxes and checkboxes with the values from the selected row
+                tb_subid.Text = row.Cells["subject_Id"].Value.ToString();
+                tb_subname.Text = row.Cells["subject_Name"].Value.ToString();
+
+                // Clear all checkboxes first
+                cb_pri.Checked = false;
+                cb_sec.Checked = false;
+                cb_ol.Checked = false;
+                cb_al.Checked = false;
+
+                // Get the selected sections and check the relevant checkboxes
+                string selectedSections = row.Cells["subject_Section"].Value.ToString();
+                if (selectedSections.Contains("Primary")) cb_pri.Checked = true;
+                if (selectedSections.Contains("Secondary")) cb_sec.Checked = true;
+                if (selectedSections.Contains("O/L")) cb_ol.Checked = true;
+                if (selectedSections.Contains("A/L")) cb_al.Checked = true;
+            }
         }
 
         private void bt_display_Click(object sender, EventArgs e)
