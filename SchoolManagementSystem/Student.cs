@@ -303,36 +303,76 @@ namespace SchoolManagementSystem
 
         private void dgv_stinfo_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
-            {
-                DataGridViewRow row = dgv_stinfo.Rows[e.RowIndex];
+          
+        }
 
-                // Ensure the column names match exactly with those in the DataTable
-                tb_stid.Text = row.Cells["Student_Id"].Value.ToString();
-                tb_stname.Text = row.Cells["Student_Name"].Value.ToString();
-                dtp_stinfo.Value = Convert.ToDateTime(row.Cells["Dob"].Value);
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
 
-                object genderValue = row.Cells["Gender"].Value;
-                if (genderValue != null)
-                {
-                    string genderString = genderValue.ToString();
+        }
 
-                    // Ensure the ComboBox has items that match the gender values
-                    if (cb_stgen.Items.Contains(genderString))
-                    {
-                        cb_stgen.SelectedItem = genderString;
-                    }
-                    else
-                    {
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
 
-                        cb_stgen.SelectedItem = null;
-                    }
+        }
 
-                    tb_stnum.Text = row.Cells["Phone_Num"].Value.ToString();
-                    tb_stemail.Text = row.Cells["Email"].Value.ToString();
-                }
+        private void cb_stgen_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
-            }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tb_stnum_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tb_stname_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tb_stid_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void studentInfoTbBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
 
         }
     }

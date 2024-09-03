@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Student));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
@@ -92,6 +92,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(737, 51);
             this.panel2.TabIndex = 2;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // button1
             // 
@@ -151,6 +152,7 @@
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Student Information";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // bt_stclear
             // 
@@ -175,6 +177,7 @@
             this.cb_stgen.Size = new System.Drawing.Size(320, 26);
             this.cb_stgen.TabIndex = 21;
             this.cb_stgen.Text = "Select";
+            this.cb_stgen.SelectedIndexChanged += new System.EventHandler(this.cb_stgen_SelectedIndexChanged);
             // 
             // pictureBox1
             // 
@@ -185,6 +188,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 19;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // dtp_stinfo
             // 
@@ -272,6 +276,7 @@
             this.tb_stnum.Name = "tb_stnum";
             this.tb_stnum.Size = new System.Drawing.Size(320, 25);
             this.tb_stnum.TabIndex = 10;
+            this.tb_stnum.TextChanged += new System.EventHandler(this.tb_stnum_TextChanged);
             // 
             // tb_stname
             // 
@@ -279,6 +284,7 @@
             this.tb_stname.Name = "tb_stname";
             this.tb_stname.Size = new System.Drawing.Size(320, 25);
             this.tb_stname.TabIndex = 7;
+            this.tb_stname.TextChanged += new System.EventHandler(this.tb_stname_TextChanged);
             // 
             // tb_stid
             // 
@@ -286,6 +292,7 @@
             this.tb_stid.Name = "tb_stid";
             this.tb_stid.Size = new System.Drawing.Size(320, 25);
             this.tb_stid.TabIndex = 6;
+            this.tb_stid.TextChanged += new System.EventHandler(this.tb_stid_TextChanged);
             // 
             // label8
             // 
@@ -296,6 +303,7 @@
             this.label8.Size = new System.Drawing.Size(52, 18);
             this.label8.TabIndex = 5;
             this.label8.Text = "Email";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // label7
             // 
@@ -306,6 +314,7 @@
             this.label7.Size = new System.Drawing.Size(119, 18);
             this.label7.TabIndex = 4;
             this.label7.Text = "Phone Number";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label6
             // 
@@ -316,6 +325,7 @@
             this.label6.Size = new System.Drawing.Size(64, 18);
             this.label6.TabIndex = 3;
             this.label6.Text = "Gender";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label5
             // 
@@ -326,6 +336,7 @@
             this.label5.Size = new System.Drawing.Size(105, 18);
             this.label5.TabIndex = 2;
             this.label5.Text = "Date Of Birth";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label4
             // 
@@ -336,6 +347,7 @@
             this.label4.Size = new System.Drawing.Size(111, 18);
             this.label4.TabIndex = 1;
             this.label4.Text = "Student Name";
+            this.label4.Click += new System.EventHandler(this.label4_Click_1);
             // 
             // label3
             // 
@@ -346,33 +358,34 @@
             this.label3.Size = new System.Drawing.Size(81, 18);
             this.label3.TabIndex = 0;
             this.label3.Text = "Student Id";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // dgv_stinfo
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(205)))), ((int)(((byte)(189)))));
-            this.dgv_stinfo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(205)))), ((int)(((byte)(189)))));
+            this.dgv_stinfo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgv_stinfo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_stinfo.BackgroundColor = System.Drawing.Color.White;
             this.dgv_stinfo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_stinfo.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgv_stinfo.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(87)))), ((int)(((byte)(34)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_stinfo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(87)))), ((int)(((byte)(34)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_stinfo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgv_stinfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(221)))), ((int)(((byte)(211)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(143)))), ((int)(((byte)(107)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_stinfo.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(221)))), ((int)(((byte)(211)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(143)))), ((int)(((byte)(107)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_stinfo.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgv_stinfo.EnableHeadersVisualStyles = false;
             this.dgv_stinfo.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(203)))), ((int)(((byte)(186)))));
             this.dgv_stinfo.Location = new System.Drawing.Point(12, 414);
@@ -409,6 +422,7 @@
             // 
             this.studentInfoTbBindingSource.DataMember = "StudentInfoTb";
             this.studentInfoTbBindingSource.DataSource = this.sclManagementSystemDataSet;
+            this.studentInfoTbBindingSource.CurrentChanged += new System.EventHandler(this.studentInfoTbBindingSource_CurrentChanged);
             // 
             // sclManagementSystemDataSet
             // 
