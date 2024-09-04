@@ -285,6 +285,70 @@ namespace SchoolManagementSystem
                 conn.Close();
             }
         }
+
+
+        private void tb_search_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+      
+        private void btn_search_Click_1(object sender, EventArgs e)
+        {
+            // Get the search ID from the search textbox
+            string searchId = tb_search.Text.Trim();
+
+            if (string.IsNullOrWhiteSpace(searchId))
+            {
+                MessageBox.Show("Please enter an Enrollment ID or Student ID to search.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-LDJQNC1\SQLEXPRESS;Initial Catalog=sclManagementSystem;Integrated Security=True"))
+                {
+                    conn.Open();
+
+                    // Use a parameterized query to prevent SQL injection
+                    string sql = "SELECT Enroll_Id, Student_Id, Student_Name, Doe FROM EnrollmentInfoTbl WHERE Enroll_Id = @searchId OR Student_Id = @searchId";
+
+                    SqlCommand cmd = new SqlCommand(sql, conn);
+                    cmd.Parameters.AddWithValue("@searchId", searchId);
+
+                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                    DataTable table = new DataTable();
+                    adapter.Fill(table);
+
+                    if (table.Rows.Count > 0)
+                    {
+                        // Display the first result in the TextBoxes and DateTimePicker
+                        DataRow row = table.Rows[0];
+
+                        tb_enid.Text = row["Enroll_Id"].ToString();
+                        tb_enstid.Text = row["Student_Id"].ToString();
+                        tb_enstname.Text = row["Student_Name"].ToString();
+
+                        // Parse the date value to set it to the DateTimePicker
+                        dtp_eninfo.Value = DateTime.Parse(row["Doe"].ToString());
+                    }
+                    else
+                    {
+                        MessageBox.Show("No records found for the provided ID.", "Not Found", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
     
 }

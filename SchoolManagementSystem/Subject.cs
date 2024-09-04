@@ -9,6 +9,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace SchoolManagementSystem
 {
@@ -204,6 +205,7 @@ namespace SchoolManagementSystem
         {
             tb_subid.Clear();             // Clear Subject ID textbox
             tb_subname.Clear();           // Clear Subject Name textbox
+            tb_search.Clear();
 
             // Uncheck all checkboxes
             cb_pri.Checked = false;
@@ -354,7 +356,72 @@ namespace SchoolManagementSystem
                 cb_al.Checked = false;        // Uncheck Section D
             }
 
+        private void btn_search_Click(object sender, EventArgs e)
+        {
+           // Get the search ID from the search textbox
+    string searchId = tb_search.Text.Trim();
+
+            if (string.IsNullOrWhiteSpace(searchId))
+            {
+                MessageBox.Show("Please enter a Subject ID to search.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (!int.TryParse(searchId, out int subjectId))
+            {
+                MessageBox.Show("Invalid Subject ID. Please enter a valid numeric ID.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-LDJQNC1\SQLEXPRESS;Initial Catalog=sclManagementSystem;Integrated Security=True"))
+                {
+                    conn.Open();
+
+                    // Use a parameterized query to prevent SQL injection
+                    string sql = "SELECT subject_Id, subject_Name, subject_Section FROM SubjectInfoTb WHERE subject_Id = @subject_Id";
+
+                    SqlCommand cmd = new SqlCommand(sql, conn);
+                    cmd.Parameters.AddWithValue("@subject_Id", subjectId);
+
+                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                    DataTable table = new DataTable();
+                    adapter.Fill(table);
+
+                    if (table.Rows.Count > 0)
+                    {
+                        // Display the first result in the TextBoxes and other controls
+                        DataRow row = table.Rows[0];
+
+                        tb_subid.Text = row["subject_Id"].ToString();
+                        tb_subname.Text = row["subject_Name"].ToString();
+
+                        // Split the sections from the database and check the corresponding checkboxes
+                        string[] sections = row["subject_Section"].ToString().Split(new[] { ", " }, StringSplitOptions.None);
+                        cb_pri.Checked = sections.Contains("Primary");
+                        cb_sec.Checked = sections.Contains("Secondary");
+                        cb_ol.Checked = sections.Contains("O/L");
+                        cb_al.Checked = sections.Contains("A/L");
+                    }
+                    else
+                    {
+                        MessageBox.Show("No records found for the provided Subject ID.", "Not Found", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                      
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+    }
 
 
 

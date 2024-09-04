@@ -35,7 +35,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.lgout_lb = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.btn_dashboard = new System.Windows.Forms.Button();
@@ -106,7 +105,6 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.panel2.Controls.Add(this.button4);
-            this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.lgout_lb);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.btn_dashboard);
@@ -141,31 +139,12 @@
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button4.UseVisualStyleBackColor = true;
             // 
-            // button2
-            // 
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Rockwell Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(53, 564);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(130, 43);
-            this.button2.TabIndex = 12;
-            this.button2.Text = "Attendance";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.UseVisualStyleBackColor = true;
-            // 
             // lgout_lb
             // 
             this.lgout_lb.AutoSize = true;
             this.lgout_lb.Font = new System.Drawing.Font("Rockwell Extra Bold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lgout_lb.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lgout_lb.Location = new System.Drawing.Point(110, 655);
+            this.lgout_lb.Location = new System.Drawing.Point(110, 604);
             this.lgout_lb.Name = "lgout_lb";
             this.lgout_lb.Size = new System.Drawing.Size(59, 13);
             this.lgout_lb.TabIndex = 11;
@@ -184,7 +163,7 @@
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(54, 635);
+            this.button1.Location = new System.Drawing.Point(54, 584);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(50, 49);
             this.button1.TabIndex = 10;
@@ -326,7 +305,6 @@
         private System.Windows.Forms.Button btn_dashboard;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label lgout_lb;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;

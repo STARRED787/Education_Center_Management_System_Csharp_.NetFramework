@@ -70,11 +70,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Dashboard.cs">
-      <SubType>UserControl</SubType>
+    <Compile Include="Dashbaod.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Dashboard.Designer.cs">
-      <DependentUpon>Dashboard.cs</DependentUpon>
+    <Compile Include="Dashbaod.Designer.cs">
+      <DependentUpon>Dashbaod.cs</DependentUpon>
     </Compile>
     <Compile Include="Enrollment.cs">
       <SubType>Form</SubType>
@@ -125,8 +125,8 @@
     <Compile Include="Teacher.Designer.cs">
       <DependentUpon>Teacher.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Dashboard.resx">
-      <DependentUpon>Dashboard.cs</DependentUpon>
+    <EmbeddedResource Include="Dashbaod.resx">
+      <DependentUpon>Dashbaod.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Enrollment.resx">
       <DependentUpon>Enrollment.cs</DependentUpon>

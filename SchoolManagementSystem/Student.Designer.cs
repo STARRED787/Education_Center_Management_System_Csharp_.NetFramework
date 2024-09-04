@@ -38,6 +38,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btn_search = new System.Windows.Forms.Button();
+            this.tb_search = new System.Windows.Forms.TextBox();
             this.cb_stsubsec = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.tb_stsub = new System.Windows.Forms.TextBox();
@@ -130,6 +132,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btn_search);
+            this.groupBox1.Controls.Add(this.tb_search);
             this.groupBox1.Controls.Add(this.cb_stsubsec);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.tb_stsub);
@@ -156,11 +160,31 @@
             this.groupBox1.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 57);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(713, 392);
+            this.groupBox1.Size = new System.Drawing.Size(713, 439);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Student Information";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // btn_search
+            // 
+            this.btn_search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btn_search.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_search.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_search.Location = new System.Drawing.Point(17, 351);
+            this.btn_search.Name = "btn_search";
+            this.btn_search.Size = new System.Drawing.Size(93, 35);
+            this.btn_search.TabIndex = 42;
+            this.btn_search.Text = "Search";
+            this.btn_search.UseVisualStyleBackColor = false;
+            this.btn_search.Click += new System.EventHandler(this.btn_search_Click);
+            // 
+            // tb_search
+            // 
+            this.tb_search.Location = new System.Drawing.Point(140, 358);
+            this.tb_search.Name = "tb_search";
+            this.tb_search.Size = new System.Drawing.Size(236, 25);
+            this.tb_search.TabIndex = 41;
             // 
             // cb_stsubsec
             // 
@@ -206,8 +230,9 @@
             // bt_stclear
             // 
             this.bt_stclear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bt_stclear.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bt_stclear.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_stclear.Location = new System.Drawing.Point(379, 352);
+            this.bt_stclear.Location = new System.Drawing.Point(380, 399);
             this.bt_stclear.Name = "bt_stclear";
             this.bt_stclear.Size = new System.Drawing.Size(88, 34);
             this.bt_stclear.TabIndex = 22;
@@ -252,8 +277,9 @@
             // bt_display
             // 
             this.bt_display.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bt_display.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bt_display.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_display.Location = new System.Drawing.Point(618, 352);
+            this.bt_display.Location = new System.Drawing.Point(619, 399);
             this.bt_display.Name = "bt_display";
             this.bt_display.Size = new System.Drawing.Size(88, 34);
             this.bt_display.TabIndex = 17;
@@ -264,8 +290,9 @@
             // bt_delete
             // 
             this.bt_delete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bt_delete.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bt_delete.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_delete.Location = new System.Drawing.Point(503, 352);
+            this.bt_delete.Location = new System.Drawing.Point(504, 399);
             this.bt_delete.Name = "bt_delete";
             this.bt_delete.Size = new System.Drawing.Size(88, 34);
             this.bt_delete.TabIndex = 15;
@@ -276,8 +303,9 @@
             // bt_update
             // 
             this.bt_update.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bt_update.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bt_update.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_update.Location = new System.Drawing.Point(128, 352);
+            this.bt_update.Location = new System.Drawing.Point(129, 399);
             this.bt_update.Name = "bt_update";
             this.bt_update.Size = new System.Drawing.Size(88, 34);
             this.bt_update.TabIndex = 14;
@@ -288,8 +316,9 @@
             // bt_add
             // 
             this.bt_add.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bt_add.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bt_add.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_add.Location = new System.Drawing.Point(253, 352);
+            this.bt_add.Location = new System.Drawing.Point(254, 399);
             this.bt_add.Name = "bt_add";
             this.bt_add.Size = new System.Drawing.Size(88, 34);
             this.bt_add.TabIndex = 13;
@@ -300,8 +329,9 @@
             // bt_save
             // 
             this.bt_save.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bt_save.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bt_save.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_save.Location = new System.Drawing.Point(16, 352);
+            this.bt_save.Location = new System.Drawing.Point(17, 399);
             this.bt_save.Name = "bt_save";
             this.bt_save.Size = new System.Drawing.Size(88, 34);
             this.bt_save.TabIndex = 12;
@@ -437,7 +467,7 @@
             this.dgv_stinfo.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_stinfo.EnableHeadersVisualStyles = false;
             this.dgv_stinfo.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(203)))), ((int)(((byte)(186)))));
-            this.dgv_stinfo.Location = new System.Drawing.Point(12, 465);
+            this.dgv_stinfo.Location = new System.Drawing.Point(12, 516);
             this.dgv_stinfo.Name = "dgv_stinfo";
             this.dgv_stinfo.RowHeadersVisible = false;
             this.dgv_stinfo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -486,7 +516,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(737, 687);
+            this.ClientSize = new System.Drawing.Size(737, 756);
             this.Controls.Add(this.dgv_stinfo);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel2);
@@ -540,5 +570,7 @@
         private System.Windows.Forms.TextBox tb_stsub;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cb_stsubsec;
+        private System.Windows.Forms.Button btn_search;
+        private System.Windows.Forms.TextBox tb_search;
     }
 }

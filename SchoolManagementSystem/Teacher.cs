@@ -302,6 +302,7 @@ namespace SchoolManagementSystem
             tb_tenum.Clear();
             tb_teemail.Clear();
             tb_tesub.Clear();
+            tb_search.Clear();
 
             // Reset the DateTimePicker to today's date
             dtp_teinfo.Value = DateTime.Now;
@@ -365,6 +366,77 @@ namespace SchoolManagementSystem
         private void dgv_teinfo_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void btn_search_Click(object sender, EventArgs e)
+        {
+            // Get the search ID from the search textbox
+            string searchId = tb_search.Text.Trim();
+
+            if (string.IsNullOrWhiteSpace(searchId))
+            {
+                MessageBox.Show("Please enter a Teacher ID to search.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (!int.TryParse(searchId, out int teacherId))
+            {
+                MessageBox.Show("Invalid Teacher ID. Please enter a valid numeric ID.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-LDJQNC1\SQLEXPRESS;Initial Catalog=sclManagementSystem;Integrated Security=True"))
+                {
+                    conn.Open();
+
+                    // Use a parameterized query to prevent SQL injection
+                    string sql = "SELECT Teacher_Id, Teacher_Name, Dob, Gender, Phone_Num, Email, Subject, Subject_Section FROM TeacherInfoTbl WHERE Teacher_Id = @Teacher_Id";
+
+                    SqlCommand cmd = new SqlCommand(sql, conn);
+                    cmd.Parameters.AddWithValue("@Teacher_Id", teacherId);
+
+                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                    DataTable table = new DataTable();
+                    adapter.Fill(table);
+
+                    if (table.Rows.Count > 0)
+                    {
+                        // Display the first result in the TextBoxes and other controls
+                        DataRow row = table.Rows[0];
+
+                        tb_teid.Text = row["Teacher_Id"].ToString();
+                        tb_tename.Text = row["Teacher_Name"].ToString();
+                        dtp_teinfo.Value = DateTime.Parse(row["Dob"].ToString());
+                        cb_tegen.SelectedItem = row["Gender"].ToString();
+                        tb_tenum.Text = row["Phone_Num"].ToString();
+                        tb_teemail.Text = row["Email"].ToString();
+                        tb_tesub.Text = row["Subject"].ToString();
+
+                        // Set checkboxes based on the sections string from the database
+                        string[] sections = row["Subject_Section"].ToString().Split(new[] { ", " }, StringSplitOptions.None);
+                        cb_pri.Checked = sections.Contains("Primary");
+                        cb_sec.Checked = sections.Contains("Secondary");
+                        cb_ol.Checked = sections.Contains("O/L");
+                        cb_al.Checked = sections.Contains("A/L");
+                    }
+                    else
+                    {
+                        MessageBox.Show("No records found for the provided Teacher ID.", "Not Found", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                      
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }

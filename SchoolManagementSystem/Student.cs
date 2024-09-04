@@ -441,8 +441,71 @@ namespace SchoolManagementSystem
         {
 
         }
+
+        private void btn_search_Click(object sender, EventArgs e)
+        {
+            // Get the search ID from the search textbox
+            string searchId = tb_search.Text.Trim();
+
+            if (string.IsNullOrWhiteSpace(searchId))
+            {
+                MessageBox.Show("Please enter a Student ID to search.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (!int.TryParse(searchId, out int studentId))
+            {
+                MessageBox.Show("Invalid Student ID. Please enter a valid numeric ID.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-LDJQNC1\SQLEXPRESS;Initial Catalog=sclManagementSystem;Integrated Security=True"))
+                {
+                    conn.Open();
+
+                    // Use a parameterized query to prevent SQL injection
+                    string sql = "SELECT Student_Id, Student_Name, Dob, Gender, Phone_Num, Email, Subject, Subject_Section FROM StudentInfoTbl WHERE Student_Id = @Student_Id";
+
+                    SqlCommand cmd = new SqlCommand(sql, conn);
+                    cmd.Parameters.AddWithValue("@Student_Id", studentId);
+
+                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                    DataTable table = new DataTable();
+                    adapter.Fill(table);
+
+                    if (table.Rows.Count > 0)
+                    {
+                        // Display the first result in the TextBoxes and other controls
+                        DataRow row = table.Rows[0];
+
+                        tb_stid.Text = row["Student_Id"].ToString();
+                        tb_stname.Text = row["Student_Name"].ToString();
+                        dtp_stinfo.Value = DateTime.Parse(row["Dob"].ToString());
+                        cb_stgen.SelectedItem = row["Gender"].ToString();
+                        tb_stnum.Text = row["Phone_Num"].ToString();
+                        tb_stemail.Text = row["Email"].ToString();
+                        tb_stsub.Text = row["Subject"].ToString();
+                        cb_stsubsec.SelectedItem = row["Subject_Section"].ToString();
+                    }
+                    else
+                    {
+                        MessageBox.Show("No records found for the provided Student ID.", "Not Found", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                     
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+       
     }
     }
+    
 
 
 

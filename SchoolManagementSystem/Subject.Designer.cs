@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Subject));
             this.studentInfoTbTableAdapter = new SchoolManagementSystem.sclManagementSystemDataSetTableAdapters.StudentInfoTbTableAdapter();
             this.studentInfoTbBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -52,12 +52,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btn_search = new System.Windows.Forms.Button();
+            this.tb_search = new System.Windows.Forms.TextBox();
+            this.cb_al = new System.Windows.Forms.CheckBox();
+            this.cb_ol = new System.Windows.Forms.CheckBox();
+            this.cb_sec = new System.Windows.Forms.CheckBox();
+            this.cb_pri = new System.Windows.Forms.CheckBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.cb_pri = new System.Windows.Forms.CheckBox();
-            this.cb_sec = new System.Windows.Forms.CheckBox();
-            this.cb_ol = new System.Windows.Forms.CheckBox();
-            this.cb_al = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.studentInfoTbBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sclManagementSystemDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_subinfo)).BeginInit();
@@ -82,30 +84,30 @@
             // 
             // dgv_subinfo
             // 
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(205)))), ((int)(((byte)(189)))));
-            this.dgv_subinfo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(205)))), ((int)(((byte)(189)))));
+            this.dgv_subinfo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_subinfo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_subinfo.BackgroundColor = System.Drawing.Color.White;
             this.dgv_subinfo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_subinfo.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgv_subinfo.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(87)))), ((int)(((byte)(34)))));
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_subinfo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(87)))), ((int)(((byte)(34)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_subinfo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_subinfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(221)))), ((int)(((byte)(211)))));
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(143)))), ((int)(((byte)(107)))));
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_subinfo.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(221)))), ((int)(((byte)(211)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(143)))), ((int)(((byte)(107)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_subinfo.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_subinfo.EnableHeadersVisualStyles = false;
             this.dgv_subinfo.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(203)))), ((int)(((byte)(186)))));
             this.dgv_subinfo.Location = new System.Drawing.Point(12, 413);
@@ -141,6 +143,7 @@
             // bt_stclear
             // 
             this.bt_stclear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bt_stclear.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bt_stclear.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_stclear.Location = new System.Drawing.Point(383, 300);
             this.bt_stclear.Name = "bt_stclear";
@@ -164,6 +167,7 @@
             // bt_display
             // 
             this.bt_display.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bt_display.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bt_display.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_display.Location = new System.Drawing.Point(622, 300);
             this.bt_display.Name = "bt_display";
@@ -176,6 +180,7 @@
             // bt_delete
             // 
             this.bt_delete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bt_delete.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bt_delete.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_delete.Location = new System.Drawing.Point(507, 300);
             this.bt_delete.Name = "bt_delete";
@@ -188,6 +193,7 @@
             // bt_update
             // 
             this.bt_update.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bt_update.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bt_update.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_update.Location = new System.Drawing.Point(132, 300);
             this.bt_update.Name = "bt_update";
@@ -200,6 +206,7 @@
             // bt_add
             // 
             this.bt_add.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bt_add.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bt_add.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_add.Location = new System.Drawing.Point(257, 300);
             this.bt_add.Name = "bt_add";
@@ -212,6 +219,7 @@
             // bt_save
             // 
             this.bt_save.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bt_save.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bt_save.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_save.Location = new System.Drawing.Point(20, 300);
             this.bt_save.Name = "bt_save";
@@ -293,9 +301,12 @@
             this.button1.TabIndex = 5;
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btn_search);
+            this.groupBox1.Controls.Add(this.tb_search);
             this.groupBox1.Controls.Add(this.cb_al);
             this.groupBox1.Controls.Add(this.cb_ol);
             this.groupBox1.Controls.Add(this.cb_sec);
@@ -319,6 +330,66 @@
             this.groupBox1.TabIndex = 26;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Subject Information";
+            // 
+            // btn_search
+            // 
+            this.btn_search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btn_search.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_search.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_search.Location = new System.Drawing.Point(21, 253);
+            this.btn_search.Name = "btn_search";
+            this.btn_search.Size = new System.Drawing.Size(87, 35);
+            this.btn_search.TabIndex = 44;
+            this.btn_search.Text = "Search";
+            this.btn_search.UseVisualStyleBackColor = false;
+            this.btn_search.Click += new System.EventHandler(this.btn_search_Click);
+            // 
+            // tb_search
+            // 
+            this.tb_search.Location = new System.Drawing.Point(140, 260);
+            this.tb_search.Name = "tb_search";
+            this.tb_search.Size = new System.Drawing.Size(236, 25);
+            this.tb_search.TabIndex = 43;
+            // 
+            // cb_al
+            // 
+            this.cb_al.AutoSize = true;
+            this.cb_al.Location = new System.Drawing.Point(169, 207);
+            this.cb_al.Name = "cb_al";
+            this.cb_al.Size = new System.Drawing.Size(55, 22);
+            this.cb_al.TabIndex = 26;
+            this.cb_al.Text = "A/L";
+            this.cb_al.UseVisualStyleBackColor = true;
+            // 
+            // cb_ol
+            // 
+            this.cb_ol.AutoSize = true;
+            this.cb_ol.Location = new System.Drawing.Point(169, 179);
+            this.cb_ol.Name = "cb_ol";
+            this.cb_ol.Size = new System.Drawing.Size(58, 22);
+            this.cb_ol.TabIndex = 25;
+            this.cb_ol.Text = "O/L";
+            this.cb_ol.UseVisualStyleBackColor = true;
+            // 
+            // cb_sec
+            // 
+            this.cb_sec.AutoSize = true;
+            this.cb_sec.Location = new System.Drawing.Point(169, 151);
+            this.cb_sec.Name = "cb_sec";
+            this.cb_sec.Size = new System.Drawing.Size(104, 22);
+            this.cb_sec.TabIndex = 24;
+            this.cb_sec.Text = "Secondary";
+            this.cb_sec.UseVisualStyleBackColor = true;
+            // 
+            // cb_pri
+            // 
+            this.cb_pri.AutoSize = true;
+            this.cb_pri.Location = new System.Drawing.Point(169, 123);
+            this.cb_pri.Name = "cb_pri";
+            this.cb_pri.Size = new System.Drawing.Size(89, 22);
+            this.cb_pri.TabIndex = 23;
+            this.cb_pri.Text = "Primary";
+            this.cb_pri.UseVisualStyleBackColor = true;
             // 
             // panel2
             // 
@@ -344,46 +415,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "SUBJECT";
             // 
-            // cb_pri
-            // 
-            this.cb_pri.AutoSize = true;
-            this.cb_pri.Location = new System.Drawing.Point(169, 123);
-            this.cb_pri.Name = "cb_pri";
-            this.cb_pri.Size = new System.Drawing.Size(89, 22);
-            this.cb_pri.TabIndex = 23;
-            this.cb_pri.Text = "Primary";
-            this.cb_pri.UseVisualStyleBackColor = true;
-            // 
-            // cb_sec
-            // 
-            this.cb_sec.AutoSize = true;
-            this.cb_sec.Location = new System.Drawing.Point(169, 151);
-            this.cb_sec.Name = "cb_sec";
-            this.cb_sec.Size = new System.Drawing.Size(104, 22);
-            this.cb_sec.TabIndex = 24;
-            this.cb_sec.Text = "Secondary";
-            this.cb_sec.UseVisualStyleBackColor = true;
-            // 
-            // cb_ol
-            // 
-            this.cb_ol.AutoSize = true;
-            this.cb_ol.Location = new System.Drawing.Point(169, 179);
-            this.cb_ol.Name = "cb_ol";
-            this.cb_ol.Size = new System.Drawing.Size(58, 22);
-            this.cb_ol.TabIndex = 25;
-            this.cb_ol.Text = "O/L";
-            this.cb_ol.UseVisualStyleBackColor = true;
-            // 
-            // cb_al
-            // 
-            this.cb_al.AutoSize = true;
-            this.cb_al.Location = new System.Drawing.Point(169, 207);
-            this.cb_al.Name = "cb_al";
-            this.cb_al.Size = new System.Drawing.Size(55, 22);
-            this.cb_al.TabIndex = 26;
-            this.cb_al.Text = "A/L";
-            this.cb_al.UseVisualStyleBackColor = true;
-            // 
             // Subject
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -393,6 +424,7 @@
             this.Controls.Add(this.dgv_subinfo);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel2);
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Subject";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -437,5 +469,7 @@
         private System.Windows.Forms.CheckBox cb_ol;
         private System.Windows.Forms.CheckBox cb_sec;
         private System.Windows.Forms.CheckBox cb_pri;
+        private System.Windows.Forms.Button btn_search;
+        private System.Windows.Forms.TextBox tb_search;
     }
 }
