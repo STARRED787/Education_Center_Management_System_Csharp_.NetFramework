@@ -39,7 +39,8 @@ namespace SchoolManagementSystem
 
         private void btn_dashboard_Click(object sender, EventArgs e)
         {
-
+            Dashbaod dash_form = new Dashbaod();
+            dash_form.Show();
         }
 
         private void btn_lgout_Click(object sender, EventArgs e)
@@ -82,5 +83,12 @@ namespace SchoolManagementSystem
             Student st =new Student();
             st.Show();
         }
+
+        private void btn_grade_Click(object sender, EventArgs e)
+        {
+            Enrollment en = new Enrollment();
+            en.Show();
+        }
     }
+    
 }
