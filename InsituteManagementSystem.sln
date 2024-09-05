@@ -5,6 +5,8 @@ VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InsituteManagementSystem", "SchoolManagementSystem\InsituteManagementSystem.csproj", "{5488F546-0838-471E-9172-65843FCD663F}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Gurugedara Insitute Management System", "Gurugedara Insitute Management System\Gurugedara Insitute Management System.vdproj", "{5D368CC9-0D31-4F53-AB38-BC2F619D273D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,8 @@ Global
 		{5488F546-0838-471E-9172-65843FCD663F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5488F546-0838-471E-9172-65843FCD663F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5488F546-0838-471E-9172-65843FCD663F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D368CC9-0D31-4F53-AB38-BC2F619D273D}.Debug|Any CPU.ActiveCfg = Debug
+		{5D368CC9-0D31-4F53-AB38-BC2F619D273D}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

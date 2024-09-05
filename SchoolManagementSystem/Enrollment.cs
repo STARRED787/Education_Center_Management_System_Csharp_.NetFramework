@@ -349,6 +349,11 @@ namespace SchoolManagementSystem
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
     
 }

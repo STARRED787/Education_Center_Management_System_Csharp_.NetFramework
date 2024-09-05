@@ -16,7 +16,7 @@ namespace SchoolManagementSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Mainfoam());
+            Application.Run(new intro());
         }
     }
 }

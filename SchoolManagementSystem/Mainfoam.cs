@@ -89,6 +89,18 @@ namespace SchoolManagementSystem
             Enrollment en = new Enrollment();
             en.Show();
         }
+
+        private void btn_teachers_Click(object sender, EventArgs e)
+        {
+            Teacher Te = new Teacher();
+            Te.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Subject su = new Subject();
+            su.Show();
+        }
     }
     
 }

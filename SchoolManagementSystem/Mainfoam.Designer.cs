@@ -36,9 +36,9 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
             this.lgout_lb = new System.Windows.Forms.Label();
+            this.btn_grade = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btn_dashboard = new System.Windows.Forms.Button();
-            this.btn_grade = new System.Windows.Forms.Button();
             this.btn_teachers = new System.Windows.Forms.Button();
             this.btn_student = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -106,9 +106,9 @@
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.panel2.Controls.Add(this.button4);
             this.panel2.Controls.Add(this.lgout_lb);
+            this.panel2.Controls.Add(this.btn_grade);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.btn_dashboard);
-            this.panel2.Controls.Add(this.btn_grade);
             this.panel2.Controls.Add(this.btn_teachers);
             this.panel2.Controls.Add(this.btn_student);
             this.panel2.Controls.Add(this.label1);
@@ -138,6 +138,7 @@
             this.button4.Text = "Subjects";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // lgout_lb
             // 
@@ -150,6 +151,26 @@
             this.lgout_lb.TabIndex = 11;
             this.lgout_lb.Text = "Log Out";
             this.lgout_lb.Click += new System.EventHandler(this.lgout_lb_Click);
+            // 
+            // btn_grade
+            // 
+            this.btn_grade.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btn_grade.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_grade.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.btn_grade.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.btn_grade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_grade.Font = new System.Drawing.Font("Rockwell Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_grade.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_grade.Image = ((System.Drawing.Image)(resources.GetObject("btn_grade.Image")));
+            this.btn_grade.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_grade.Location = new System.Drawing.Point(52, 342);
+            this.btn_grade.Name = "btn_grade";
+            this.btn_grade.Size = new System.Drawing.Size(130, 45);
+            this.btn_grade.TabIndex = 6;
+            this.btn_grade.Text = "Enrollment";
+            this.btn_grade.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_grade.UseVisualStyleBackColor = true;
+            this.btn_grade.Click += new System.EventHandler(this.btn_grade_Click);
             // 
             // button1
             // 
@@ -192,26 +213,6 @@
             this.btn_dashboard.UseVisualStyleBackColor = true;
             this.btn_dashboard.Click += new System.EventHandler(this.btn_dashboard_Click);
             // 
-            // btn_grade
-            // 
-            this.btn_grade.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btn_grade.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_grade.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.btn_grade.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
-            this.btn_grade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_grade.Font = new System.Drawing.Font("Rockwell Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_grade.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_grade.Image = ((System.Drawing.Image)(resources.GetObject("btn_grade.Image")));
-            this.btn_grade.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_grade.Location = new System.Drawing.Point(52, 266);
-            this.btn_grade.Name = "btn_grade";
-            this.btn_grade.Size = new System.Drawing.Size(130, 45);
-            this.btn_grade.TabIndex = 6;
-            this.btn_grade.Text = "Enrollment";
-            this.btn_grade.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_grade.UseVisualStyleBackColor = true;
-            this.btn_grade.Click += new System.EventHandler(this.btn_grade_Click);
-            // 
             // btn_teachers
             // 
             this.btn_teachers.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
@@ -222,13 +223,14 @@
             this.btn_teachers.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btn_teachers.Image = ((System.Drawing.Image)(resources.GetObject("btn_teachers.Image")));
             this.btn_teachers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_teachers.Location = new System.Drawing.Point(52, 437);
+            this.btn_teachers.Location = new System.Drawing.Point(52, 431);
             this.btn_teachers.Name = "btn_teachers";
             this.btn_teachers.Size = new System.Drawing.Size(130, 38);
             this.btn_teachers.TabIndex = 4;
             this.btn_teachers.Text = "Teachers";
             this.btn_teachers.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_teachers.UseVisualStyleBackColor = true;
+            this.btn_teachers.Click += new System.EventHandler(this.btn_teachers_Click);
             // 
             // btn_student
             // 
@@ -240,7 +242,7 @@
             this.btn_student.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btn_student.Image = ((System.Drawing.Image)(resources.GetObject("btn_student.Image")));
             this.btn_student.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_student.Location = new System.Drawing.Point(52, 357);
+            this.btn_student.Location = new System.Drawing.Point(53, 264);
             this.btn_student.Name = "btn_student";
             this.btn_student.Size = new System.Drawing.Size(130, 45);
             this.btn_student.TabIndex = 3;

@@ -120,11 +120,11 @@
             this.dgv_teinfo.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_teinfo.EnableHeadersVisualStyles = false;
             this.dgv_teinfo.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(203)))), ((int)(((byte)(186)))));
-            this.dgv_teinfo.Location = new System.Drawing.Point(12, 523);
+            this.dgv_teinfo.Location = new System.Drawing.Point(12, 499);
             this.dgv_teinfo.Name = "dgv_teinfo";
             this.dgv_teinfo.RowHeadersVisible = false;
             this.dgv_teinfo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_teinfo.Size = new System.Drawing.Size(713, 210);
+            this.dgv_teinfo.Size = new System.Drawing.Size(713, 140);
             this.dgv_teinfo.TabIndex = 27;
             this.dgv_teinfo.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.DeepOrange;
             this.dgv_teinfo.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(205)))), ((int)(((byte)(189)))));
@@ -374,7 +374,7 @@
             this.panel2.Controls.Add(this.label1);
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(737, 57);
+            this.panel2.Size = new System.Drawing.Size(737, 35);
             this.panel2.TabIndex = 25;
             // 
             // button5
@@ -396,11 +396,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label1.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label1.Location = new System.Drawing.Point(300, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(146, 29);
+            this.label1.Size = new System.Drawing.Size(79, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "TEACHERS";
             // 
@@ -435,7 +435,7 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(12, 74);
+            this.groupBox1.Location = new System.Drawing.Point(12, 50);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(713, 443);
             this.groupBox1.TabIndex = 26;
@@ -533,7 +533,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(737, 763);
+            this.ClientSize = new System.Drawing.Size(737, 649);
             this.ControlBox = false;
             this.Controls.Add(this.dgv_teinfo);
             this.Controls.Add(this.panel2);
